@@ -1,0 +1,169 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.messi-banner {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    opacity: 100%;
+    z-index: -1;
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48,
+        'font-size' 10px;
+    margin-top: 18%;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.header-conteudo {
+    display: flex;
+    width: 100%;
+    height: 47px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-conteudo li {
+    margin-left: 2%;
+}
+
+.icones-header {
+    margin-left: 2%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.conteudo-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo-conteudo-banner {
+    display: flex;
+    align-self: center;
+    margin-top: 15%;
+}
+
+.conteudo-banner-esquerda {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.escrita-banner-esquerda {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+}
+
+#span-genio {
+    color: #E6AF2E;
+}
+#span-eterno {
+    color: #E6AF2E
+}
+
+.conteudo-banner-direita {
+    display: flex;
+    flex-direction: ROW;
+    justify-content: space-evenly;
+    width: 40%;
+    height: 10%;
+    margin-left: 40%;
+    margin-top: 5.7%
+}
+
+.conteudo-banner-direita h2 {
+    margin: 0 0 0.5em 0;
+}
+
+.gols {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ballon-dor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.conteudo-banner-direita p {
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.botao-paginainicial {
+    margin-top: 10%;
+    display: flex;
+    width: 70%;
+}
+
+.botao-paginainicial button {
+    padding: 6px 12px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: #80B7F9;
+    width: 100%;
+    transition: background-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.botao-paginainicial button:hover {
+    background-color: #1D4E89;
+    color: #ffffff;
+  }
