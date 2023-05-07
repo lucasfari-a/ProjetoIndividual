@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-paginaestatisticas.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/logoprovisorio.png" alt="">
+            </div>
+
+            <div class="header-conteudo">
+                <li class="li-header"><a>Home</a></li>
+                <li class="li-header"><a>História</a></li>
+                <li class="li-header"><b>Títulos</b></li>
+                <li class="li-header"><a>Sobre mim</a></li>
+                <li class="li-header>">|</li>
+
+                <div class="icones-header">
+                    <span id="usericon" class="material-symbols-outlined">account_circle</span>
+                    <button onclick="marcha()" id="setaicon"
+                        class="material-symbols-outlined">keyboard_arrow_down</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="body-estatistica">
+        <div class="container">
+            <div class="conteudoestatistica">
+                <div class="bio-stats">
+                    <div class="biografia">
+                        <img src="../../assets/messi-perfil.png" id="messi-perfil">
+                        <div class="nome-messi">Lionel Andrés Messi Cuccittini</div>
+                        <div class="conteudo-biografia">
+                            <p>Idade: 35 anos</p>
+                            <p>Altura: 1,70m</p>
+                            <p>Clubes: Barcelona, PSG</p>
+                            <p>Seleção: Argentina <img src="../../assets/bandeira argentina.png"
+                                    id="bandeira-argentina">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="stats-gerais">
+                        <div class="titulo-stats-gerais">ESTATÍSTICAS GERAIS</div>
+                        <div class="conteudo-stats-gerais">
+
+                            <div class="stats-individual" onclick="stats_gerais(1)" id="div_stats_individual">
+                                <div class="titulo-individual">INDIVIDUAL</div>
+                                <div class="conteudo-stats-individual">
+                                    <p>• 805 GOLS</p>
+                                    <p>• 357 ASSISTÊNCIAS</p>
+                                    <p>• 7 BOLAS DE OURO</p>
+                                    <p>• 6 CHUTEIRAS DE OURO</p>
+                                    <p>• 2 WC GOLDEN BALL</p>
+                                    <p>• 1 PRÊMIO LAUREUS</p>
+                                </div>
+                                <button onclick="detalhes_estatisticas()">Clique aqui para mais detalhes sobre as
+                                    estatísticas</button>
+                            </div>
+                            <div class="stats-coletivo" onclick="stats_gerais(2)" id="div_stats_coletivo">
+                                <div class="titulo-coletivo">COLETIVO</div>
+                                <div class="conteudo-stats-coletivo">
+                                    <p>• 1 COPA DO MUNDO</p>
+                                    <p>• 4 CHAMPIONS LEAGUE</p>
+                                    <p>• 11 TROFÉUS DE LIGA</p>
+                                    <p>• 7 COPAS DA LIGA</p>
+                                    <p>• 3 MUNDIAS DE CLUBE</p>
+                                    <p>• 1 OURO OLÍMPICO</p>
+                                    <p>• 1 COPA AMÉRICA</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="titulos-coletivos" id="trofeus_coletivos">
+                    <div class="titulo-titulos">TROFÉUS COLETIVOS</div>
+                    <div class="titulos-imagens-visivel">
+                        <img src="../../assets/trofeu-copadomubndo.png" onclick="escolher_titulo(1)">
+                        <img src="../../assets/trofeu-copaamerica.png" onclick="escolher_titulo(2)">
+                        <img src="../../assets/trofeu-lafinalissima.png" onclick="escolher_titulo(3)">
+                        <img src="../../assets/trofeu-champions.webp" onclick="escolher_titulo(4)">
+                        <img src="../../assets/trofeu-laliga.png" onclick="escolher_titulo(5)">
+                        <img src="../../assets/trofeu-copadelrey.png" onclick="escolher_titulo(6)">
+                    </div>
+
+                    <div class="titulos-imagens-visivel">
+                        <img src="../../assets/trofeu-mundialdeclubes.png" onclick="escolher_titulo(7)">
+                        <img src="../../assets/trofeu-supercopaespanha.png" onclick="escolher_titulo(8)">
+                        <img src="../../assets/trofeu-supercopauefa.png" onclick="escolher_titulo(9)">
+                        <img src="../../assets/trofeu-ligue1.png" onclick="escolher_titulo(10)">
+                        <img src="../../assets/trofeu-supercopafranca.png" onclick="escolher_titulo(11)">
+                    </div>
+                    <div class="botoes_slide_titulos">
+                        <button class="botao_esquerda" onclick="passar_div(-1)">&#10094;</button>
+                        <button class="botao_direita" onclick="passar_div(+1)">&#10095;</button>
+                    </div>
+                </div>
+
+                <div class="titulos-individuais" id="premios_individuais">
+                    <div class="titulo-titulos">PRÊMIOS INDIVIDUAIS</div>
+                    <div class="premios-individuais">
+                        <img src="../../assets/premio-boladeouro.png" onclick="escolher_premio(1)">
+                        <img src="../../assets/premio-chuteiradeouro.png" onclick="escolher_premio(2)">
+                        <img src="../../assets/premio-goldenball.png" onclick="escolher_premio(3)">
+                        <img src="../../assets/premio-thebest.png" onclick="escolher_premio(4)">
+                        <img src="../../assets/premio-melhoruefa.png" onclick="escolher_premio(5)">
+                        <img src="../../assets/premio-laureus.png" onclick="escolher_premio(6)">
+                    </div>
+                </div>
+
+                <div class="conteudo-resumo-premio" id="conteudo-resumo-premio">
+
+                    <div class="resumo-titulo-individual" id="premio-bola-de-ouro">
+                        <div class="imagem-resumo"><img src="../../assets/messi-boladeouro.jpg"></div>
+                        <div class="conteudo-resumo-titulo-individual">
+
+                            <div class="titulo-resumo">BOLA DE OURO</div>
+                            <div class="conteudo-resumo">A Bola de Ouro é um dos prêmios mais prestigiados no mundo do
+                                futebol, concedido anualmente ao melhor jogador do mundo durante o período de janeiro a
+                                dezembro do ano anterior. Com sete títulos conquistados, Lionel Messi compartilha o
+                                posto de maior vencedor da história do prêmio com o lendário Pelé.
+                                <br><br>
+                                O astro argentino recebeu sua primeira Bola de Ouro em 2009, seguida por três títulos
+                                consecutivos nos anos de 2010, 2011 e 2012. Ele voltou a receber o prêmio em 2015, 2019
+                                e 2021, coroando sua trajetória como um dos maiores jogadores da história do esporte.
+                                <br><br>
+                                Com sua recente atuação brilhante na Copa do Mundo e números impressionantes jogando
+                                pelo Paris Saint-Germain, especula-se que Messi possa conquistar sua oitava Bola de Ouro
+                                em 2023. Apesar da concorrência acirrada, o desempenho do craque argentino o coloca como
+                                um dos favoritos para levar o prêmio pela oitava vez.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-individual" id="premio-chuteira-de-ouro">
+                        <div class="imagem-resumo"><img src="../../assets/messi-chuteiradeouro.webp"></div>
+                        <div class="conteudo-resumo-titulo-individual">
+
+                            <div class="titulo-resumo">CHUTEIRA DE OURO</div>
+                            <div class="conteudo-resumo">A Chuteira de Ouro é um prêmio cobiçado no futebol, concedido
+                                ao maior artilheiro das ligas europeias em uma temporada. Messi, um talento excepcional,
+                                brilhou e conquistou esse troféu em diversas ocasiões.
+                                <br><br>
+                                O primeiro título da Chuteira de Ouro veio na temporada 2009-2010, com 34 gols marcados
+                                na La Liga. Desde então, Messi continuou a dominar os gramados, vencendo o prêmio mais
+                                cinco vezes: <br> 2011-2012 (<b>50 GOLS</b>), 2012-2013, 2016-2017, 2017-2018 e
+                                2018-2019.
+                                <br><br>
+                                Sua habilidade nos dribles, visão de jogo e finalização precisa o tornam um pesadelo
+                                para os goleiros adversários. Messi é um dos maiores goleadores de todos os tempos,
+                                estabelecendo recordes que dificilmente serão quebrados.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-individual" id="premio-golden-ball">
+                        <div class="imagem-resumo"><img src="../../assets/messi-goldenball.jpg"></div>
+                        <div class="conteudo-resumo-titulo-individual">
+
+                            <div class="titulo-resumo">GOLDEN BALL</div>
+                            <div class="conteudo-resumo">O Golden Ball, um prêmio patrocinado pela Adidas, é concedido
+                                ao melhor jogador em uma edição da Copa do Mundo. Criado em 1982, esse troféu é um dos
+                                mais prestigiosos do futebol mundial.
+                                <br><br>
+                                Lionel Messi é o único jogador na história a ter conquistado o Golden Ball duas vezes ao
+                                longo de sua carreira. A primeira vez foi em 2014, na Copa do Mundo no Brasil, onde a
+                                Argentina alcançou a segunda colocação, perdendo a final para a Alemanha. A segunda vez,
+                                foi na última edição de Copa do Mundo, no Qatar em 2022, onde sua seleção se sagrou
+                                campeã.
+                                <br><br>
+                                É impressionante que na última Copa de sua carreira, aos 35 anos, Lionel Messi tenha
+                                conquistado um troféu individual de tamanha expressão. Com jogadas mágicas e desempenho
+                                excepcional no torneio mais importante do planeta, ele levou sua equipe ao ápice do
+                                futebol. A vitória da Argentina na Copa do Mundo de 2022 foi um marco significativo, e
+                                Messi foi o protagonista indiscutível.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-individual" id="premio-the-best">
+                        <div class="imagem-resumo"><img src="../../assets/messi-thebest.jpg"></div>
+                        <div class="conteudo-resumo-titulo-individual">
+
+                            <div class="titulo-resumo">THE BEST</div>
+                            <div class="conteudo-resumo">O prêmio The Best é concedido pela Federação Internacional de
+                                Futebol para o melhor jogador da temporada, enquanto a Bola de Ouro é concedida pela
+                                revista francesa France Football para o melhor jogador do ano. Entre 2009 e 2016 o
+                                prêmio era entregue de forma conjunta, porém agora são duas cerimônias independentes.
+                                <br><br>
+                                Messi conquistou o prêmio duas vezes (2019 e 2023), estando empatado com o atacante
+                                polônes Robert Lewandowski(2020 e 2021) e o atacante português Cristiano Ronaldo (2016 e
+                                2017).
+                                <br><br>
+                                Como o prêmio era entregue de forma conjunta entre a FIFA e a France Football, há uma
+                                confusão sobre quantas vezes Messi é oficialmente considerado o melhor do mundo. A
+                                resposta é sete vezes, tendo conquistado em 2009,2010,2011,2012,2015,2019 e 2023.
+                                <br> Percebe-se que a bola de ouro que o craque conquistou em 2021 não foi considerada
+                                por essa razão.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-individual" id="premio-uefa">
+                        <div class="imagem-resumo"><img src="../../assets/messi-uefa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-individual">
+
+                            <div class="titulo-resumo">MELHOR JOGADOR DA UEFA</div>
+                            <div class="conteudo-resumo">O prêmio de melhor jogador da UEFA foi criado em 2011 e é
+                                direcionado para o melhor jogador atuando em um clube europeu na temporada anterior.
+                                Diferentemente da Bola de ouro e do The Best, esse prêmio leva em considerações também
+                                títulos conquistados de forma coletiva.<br>
+                                Por esse motivo, Messi tem apenas duas conquistas, justamente nas fases mais vitoriosas
+                                do Barcelona.
+                                <br><br>
+                                Nas temporadas 2010-11 e 2014-15, quando a equipe catalã dominou o futebol europeu,
+                                conquistando quase todas as competições possíveis e encantando o mundo com o futebol
+                                jogada. <br>
+                                Seja em 2010-11 com o Tik-Taka de Guardiola que revolucionou a forma de jogar futebol,
+                                com toques de bola rápidos e em direção ao gol, ou em 2014-15 com o Trio MSN que é
+                                considerado por muitos o melhor trio de ataque da história.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-individual" id="premio-laureus">
+                        <div class="imagem-resumo"><img src="../../assets/messi-laureus.jpg"></div>
+                        <div class="conteudo-resumo-titulo-individual">
+
+                            <div class="titulo-resumo">PRÊMIO LAUREUS</div>
+                            <div class="conteudo-resumo">Em 2020, Lionel Messi alcançou uma conquista histórica ao
+                                vencer o Prêmio Laureus do Esporte Mundial na categoria de atleta masculino do ano. Essa
+                                premiação anual reconhece as realizações individuais de atletas do sexo masculino e foi
+                                concedida pela primeira vez em 2000. Após oito nomeações anteriores, Messi finalmente se
+                                tornou o primeiro jogador de futebol a receber esse prestigioso prêmio, compartilhando-o
+                                com Lewis Hamilton, o renomado piloto inglês de Fórmula 1.
+                                <br><br>
+                                A vitória de Messi no Prêmio Laureus foi um marco significativo que transcendeu o mundo
+                                do futebol. Ela destacou a importância e o impacto do talento e da influência de Messi
+                                não apenas dentro das quatro linhas, mas também no cenário esportivo global como um
+                                todo. O prêmio reconheceu não apenas suas habilidades extraordinárias como jogador, mas
+                                também seu impacto e inspiração como figura esportiva proeminente.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conteudo-resumo-titulo" id="conteudo-resumo-titulo">
+
+                    <div class="resumo-titulo-coletivo" id="titulo-copadomundo">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-copaamerica">
+                        <div class="imagem-resumo"><img src="../../assets/messi-copaamerica.jpeg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-lafinalissima">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-champions">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-laliga">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-copadelrey">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-mundial">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-supercopaespanha">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-supercopauefa">
+                        <div class="imagem-resumo"><img src="../../assets/messi-tacadacopa.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">COPA DO MUNDO</div>
+                            <div class="conteudo-resumo">Após sofrer derrotas amargas na final da Copa do Mundo de 2014 e na Copa América de 2016, além de uma eliminação precoce nas oitavas de final da Copa do Mundo de 2018 e anunciar sua aposentadoria da seleção, Lionel Messi foi agraciado com um destino especial no futebol.
+                                <br><br>
+                                Com um total de 7 gols e 3 assistências, incluindo 2 gols na final, Messi quebrou inúmeros recordes da Copa do Mundo e consolidou sua posição como o melhor jogador da atualidade, encerrando qualquer controvérsia a respeito.
+                                <br><br>
+                                Em um momento tão turbulento na história de seu país, Messi levou alegria aos corações dos argentinos, que tomaram as ruas para celebrar o título conquistado, encerrando um jejum de 36 anos sem uma conquista de Copa do Mundo.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-ligue1">
+                        <div class="imagem-resumo"><img src="../../assets/messi-ligue1.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">LIGUE 1</div>
+                            <div class="conteudo-resumo">Após uma chegada muito aguardada ao Paris Saint-Germain, Lionel Messi rapidamente mostrou seu valor, ajudando o clube francês a conquistar pela décima vez o título da Ligue 1, marcando assim seu primeiro troféu com a nova equipe.
+                                <br><br>
+                                Embora tenha sido uma temporada de adaptação, considerada abaixo do padrão e qualidade que Messi já demonstrou anteriormente, ele contribuiu com 6 gols e 15 assistências na competição. Embora esses números estejam distantes das épocas douradas no Barcelona, quando ele marcou 50 gols em uma única temporada da liga (2011-12), Messi ainda teve um impacto significativo no desempenho do PSG.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resumo-titulo-coletivo" id="titulo-supercopafranca">
+                        <div class="imagem-resumo"><img src="../../assets/messi-supercopafranca.jpg"></div>
+                        <div class="conteudo-resumo-titulo-coletivo">
+
+                            <div class="titulo-resumo">SUPERCOPA DA FRANÇA</div>
+                            <div class="conteudo-resumo">A Supercopa da frança foi especial para Lionel Messi por dois motivos, em primeiro ele se firmou como uma peça fundamental na equipe do PSG, conquistando seu 2º título pelo clube e também porque ele se tornou o jogador com mais gol em finais da história, na época o recorde era do Rei Pelé com 31 gols.
+                                <br><br>
+                                Esse foi o último título por clubes que Messi ganhou até o momento, porém isso deve mudar em breve, com o PSG liderando o campeonato francês com muita sobra.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="footer">
+            Copyright © 2023 - 2023 Mundinho Messi. Todos os direitos reservados. | Termos de uso | Política de
+            privacidade | Definições de cookies | Mapa do site
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+
+<script src="script.js"></script>
