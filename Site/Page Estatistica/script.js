@@ -1,3 +1,6 @@
+function detalhes_estatisticas(){
+    window.location.href = `./Page Detalhes Estatística/paginadetalhe.html`
+}
 
 const estatistica_individual = document.getElementById("div_stats_individual");
 const premios_individuais = document.getElementById("premios_individuais");

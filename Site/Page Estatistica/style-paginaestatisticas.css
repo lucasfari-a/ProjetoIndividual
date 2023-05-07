@@ -29,6 +29,10 @@ h3 {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
 .logo {
     display: flex;
     align-items: center;
@@ -259,6 +263,47 @@ button {
     font-size: 25px;
 }
 
+.tag-campeao {
+    border-radius: 50px;
+    background-color: #1D4E89;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+}
+
+.champions-league {
+    left: 53.5%;
+}
+
+.la-liga {
+    left: 70.5%
+}
+
+.copa-del-rey {
+    left: 85%
+}
+
+.mundial-de-clubes {
+    left: 20%;
+}
+
+.supercopa-espanha {
+    left: 34.5%;
+}
+
+.supercopa-uefa {
+    left: 50%;
+}
+
+
+
 /* PREMIOS INDIVIDUAIS */
 
 .titulos-individuais {
@@ -275,6 +320,43 @@ button {
     margin-bottom: 2%;
     cursor: pointer;
 }
+
+.tag-premio {
+    border-radius: 50px;
+    background-color: #1D4E89;
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+}
+
+.bolas-de-ouro {
+    left: 20%;
+}
+
+.chuteiras-de-ouro {
+    left: 35%;
+}
+
+.golden-ball {
+    left: 46%;
+}
+
+.the-best {
+    left: 56.5%;
+}
+
+.best-uefa {
+    left: 70.5%;
+}
+
+
 
 /* RESUMO PREMIOS INDIVIDUAIS */
 
