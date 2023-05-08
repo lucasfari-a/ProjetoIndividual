@@ -819,7 +819,13 @@ button {
     font-size: 13px;
     font-weight: 700;
     padding: 5px 15px;
+    transition: background-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
 }
+
+.bloco-sobre-mim-botao button:hover {
+    background-color: #FFED02;
+    color: #000000;
+  }
 
 /* FOOTER */
 
