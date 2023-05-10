@@ -1,0 +1,141 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    font-family: Poppins;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+  }
+  
+  .fade::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3),rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.5), rgba(6, 17, 45,.75), rgba(6, 17, 45, 0.9));
+  }
+  
+  .fade img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .conteudo-login {
+    display: flex;
+    justify-content: flex-end;
+  }
+.login {
+    width: 31.5%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 16%;
+    margin-right: 8%;
+    height: 100%;
+}
+
+.titulo-login{
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+    padding-bottom: 5%;
+}
+
+.nao_tem_cadastro {
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 2%;
+}
+
+#cadastre-se a {
+    padding-left: 1.5%;
+      text-decoration: none;
+      color: #436C9D;
+        font-weight: 600;
+}
+
+.inputs input {
+    background-color: #2b4570d4;
+    border: 0;
+    border-radius: 17.5px;
+    height: 50px;
+    margin-bottom: 3%;
+    width: 188px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 3%;
+}
+
+.email_senha {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.email_senha input {
+    width: 85%;
+}
+
+.email_senha input::placeholder {
+    color: black;
+    font-size: 10px;
+    position: relative;
+    bottom: 28%;
+    left: 1%;
+    font-weight: 700;
+  }
+
+  .login input:hover {
+    background-color: #2b4570;
+    border: solid .5px #ffffff88;
+  }
+
+.botao {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.botao button {
+    width: 35%;
+    height: 40px;
+    border-radius: 17.5px;
+    border: white solid 1px;
+    background-color: #00bfff90;
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.botao button:hover {
+    font-size: 14px;
+    background-color: #03192D;
+}
+
+  
+  
+
+  

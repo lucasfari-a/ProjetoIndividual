@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../cssGlobal/menuflutuante.css">
     <link rel="stylesheet" href="style-sobremim.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -29,9 +30,26 @@
 
                 <div class="icones-header">
                     <span id="usericon" class="material-symbols-outlined">account_circle</span>
-                    <button onclick="marcha()" id="setaicon"
+                    <button onclick="abrir_menu_flutuante()" id="setaicon"
                         class="material-symbols-outlined">keyboard_arrow_down</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bloco_flutuante" id="bloco_flutuante">
+        <div class="conteudo-bloco-flutuante">
+            <div class="conteudo-nome-email">
+            <div class="saudacao">Olá, <span id="nome_saudacao">Lucas</span></div>
+            lucas.flima@sptech.school
+            </div>
+            <div class="conteudo-opcoes">
+                <span><a href="">Gerenciar conta</a></span>
+                <span><a href="../Page Estatistica/Page Detalhes Estatística/paginadetalhe.html">Estatísticas detalhadas</a></span>
+                <span><a href="">Votação</a></span>
+            </div>
+            <div class="logout">
+                <a href="../Page Login/paginalogin.html">Fazer logout</a>
             </div>
         </div>
     </div>
@@ -95,3 +113,17 @@
 </body>
 
 </html>
+
+<script>
+
+function abrir_menu_flutuante(){
+    var menu_flutuante = document.getElementById("bloco_flutuante")
+
+    if(menu_flutuante.style.display == 'none'){
+        menu_flutuante.style.display = `flex`
+    } else {
+        menu_flutuante.style.display = 'none'
+    }
+}
+
+</script>

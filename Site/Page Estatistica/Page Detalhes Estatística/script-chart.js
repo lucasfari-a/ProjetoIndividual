@@ -1,4 +1,14 @@
-function voltar_estatistica(){
+function abrir_menu_flutuante() {
+    var menu_flutuante = document.getElementById("bloco_flutuante")
+
+    if (menu_flutuante.style.display == 'none') {
+        menu_flutuante.style.display = `flex`
+    } else {
+        menu_flutuante.style.display = 'none'
+    }
+}
+
+function voltar_estatistica() {
     window.location.href = `../paginaestatisticas.html`
 }
 
@@ -366,7 +376,7 @@ const gols_selecao_array_valores = gols_selecao_array.map(Number);
 
 /* GRÁFICO ASSISTÊNCIAS POR SELEÇÃO */
 
-const assistencias_selecao = [2,2,4,3,1,2,9,1,4,2,3,6,0,3,3,0,5,3,1];
+const assistencias_selecao = [2, 2, 4, 3, 1, 2, 9, 1, 4, 2, 3, 6, 0, 3, 3, 0, 5, 3, 1];
 
 const data_assistencias_selecao = {
     labels: labels_selecao,
@@ -440,3 +450,55 @@ const grafico_assistencias_selecao = new Chart(grafico_assistencias_argentina, c
 
 const assistencias_selecao_array = data_assistencias_selecao.datasets.find(dataset => dataset.label == 'Assistências').data;
 const assistencias_selecao_array_valores = assistencias_selecao_array.map(Number);
+
+grafico_gols.style.display = `flex`;
+    grafico_assistencias.style.display = `none`;
+    grafico_participacoes.style.display = `none`;
+    grafico_gols_argentina.style.display = `none`;
+    grafico_assistencias_argentina.style.display = `none`;
+
+function escolher_grafico(n) {
+    grafico_gols.style.display = `none`
+    grafico_assistencias.style.display = `none`;
+grafico_participacoes.style.display = `none`;
+grafico_gols_argentina.style.display = `none`;
+grafico_assistencias_argentina.style.display = `none`;
+
+    switch (n) {
+        case 1:
+            if (grafico_gols.style.display == `flex`){
+                grafico_gols.style.display = `none`;
+            } else {
+                grafico_gols.style.display = `flex`
+            }
+            break;
+        case 2:
+            if (grafico_assistencias.style.display == `flex`){
+                grafico_assistencias.style.display = `none`;
+            } else {
+                grafico_assistencias.style.display = `flex`
+            }
+            break;
+        case 3:
+            if (grafico_participacoes.style.display == `flex`){
+                grafico_participacoes.style.display = `none`;
+            } else {
+                grafico_participacoes.style.display = `flex`
+            }
+            break;
+        case 4:
+            if (grafico_gols_argentina.style.display == `flex`){
+                grafico_gols_argentina.style.display = `none`;
+            } else {
+                grafico_gols_argentina.style.display = `flex`
+            }
+            break;
+        case 5:
+            if (grafico_assistencias_argentina.style.display == `flex`){
+                grafico_assistencias_argentina.style.display = `none`;
+            } else {
+                grafico_assistencias_argentina.style.display = `flex`
+            }
+            break;
+    }
+}

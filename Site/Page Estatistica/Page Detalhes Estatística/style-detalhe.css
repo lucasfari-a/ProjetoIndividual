@@ -87,18 +87,13 @@ button {
     all: unset;
     cursor: pointer;
 }
-
 /* CONTÉUDO */
 
-.body-graficos {
+.body_graficos {
     display: flex;
     flex-direction: column;
     background-color: #9EC3E6;
     justify-content: center;
-}
-
-.conteudo-graficos {
-    width: 100%;
 }
 
 .setinha-voltar {
@@ -109,27 +104,71 @@ button {
     cursor: pointer;
 }
 
-.titulo-conteudo-graficos {
-    text-align: center;
-    font-size: 36px;
-    font-weight: 700;
-    color: black;
+.graficos {
+    margin: 10% 0 5% 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
-.grafico {
-    width: 70%;
-    margin: auto;
-    height: 15%;
-    margin-bottom: 4%;
+.imagem_lateral {
+    width: 30%;
 }
 
+.imagem_lateral img {
+    width: 100%;
+    height: 460px;
+    border-radius: 10px 0 0 10px;
+}
 
-.titulo-grafico {
+.conteudo_graficos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blocos_titulos {
     background-color: #03192D;
+    display: flex;
+    flex-direction: row;
     color: white;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 0 10px 0 0 ;
+    cursor: pointer;
+}
+
+.titulos img {
+    width: 25px;
+    height: 25px;
+}
+
+.titulos {
+    width: 20%;
+    display: flex;
     text-align: center;
-    font-weight: 600;
-    padding: .5% 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 1% 2% 0;
+}
+
+.icons_titulos {
+    text-align: center;
+    padding-top: 2%;
+}
+
+#gols_pela_selecao {
+    padding-top: 17.5%;
+}
+
+.graficos_canvas {
+    height: 80.5%;
+    background-color: white;
+    border-radius: 0 0 10px 0;
+}
+
+.graficos_canvas canvas {
+    animation: clarear 1s;
 }
 
 /* footer */

@@ -1,3 +1,13 @@
+function abrir_menu_flutuante(){
+    var menu_flutuante = document.getElementById("bloco_flutuante")
+
+    if(menu_flutuante.style.display == 'none'){
+        menu_flutuante.style.display = `flex`
+    } else {
+        menu_flutuante.style.display = 'none'
+    }
+}
+
 function detalhes_estatisticas(){
     window.location.href = `./Page Detalhes Estatística/paginadetalhe.html`
 }
