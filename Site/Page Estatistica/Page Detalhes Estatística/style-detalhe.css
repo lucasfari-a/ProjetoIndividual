@@ -92,7 +92,7 @@ button {
 .body_graficos {
     display: flex;
     flex-direction: column;
-    background-color: #9EC3E6;
+    background: linear-gradient(#08335a, #ffffff);
     justify-content: center;
 }
 
@@ -169,6 +169,12 @@ button {
 
 .graficos_canvas canvas {
     animation: clarear 1s;
+}
+
+@media (min-width: 1365px){
+    .graficos_canvas {
+        height: 55.9vh;
+    }   
 }
 
 /* footer */

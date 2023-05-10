@@ -278,6 +278,14 @@ button {
     top: 82%;
 }
 
+
+@media (min-width: 1365px) {
+    .tag-campeao {
+        top: 75%;
+    }
+}
+    
+
 .champions-league {
     left: 53.5%;
 }
