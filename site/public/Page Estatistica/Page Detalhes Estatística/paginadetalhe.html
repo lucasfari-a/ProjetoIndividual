@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/funcoes.js"></script>
+    <link rel="stylesheet" href="../../cssGlobal/menuflutuante.css">
+    <link rel="stylesheet" href="style-detalhe.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>LM10 - Estatística detalhada</title>
+</head>
+
+<body onload="validarSessao()">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../../assets/logoprovisorio.png" alt="">
+            </div>
+
+            <div class="header-conteudo">
+                <li class="li-header"><a href="../../Page Inicial/paginainicial.html">Home</a></li>
+                <li class="li-header"><a href="../../Page História/paginahistoria.html">História</a></li>
+                <li class="li-header"><a href="../paginaestatisticas.html"><b>Títulos</b></li>
+                <li class="li-header"><a href="../../Page Sobre Mim/paginasobremim.html">Sobre mim</a></li>
+                <li class="li-header>">|</li>
+
+                <div class="icones-header">
+                    <span id="usericon" class="material-symbols-outlined">account_circle</span>
+                    <button onclick="abrir_menu_flutuante()" id="setaicon"
+                        class="material-symbols-outlined">keyboard_arrow_down</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bloco_flutuante" id="bloco_flutuante">
+        <div class="conteudo-bloco-flutuante">
+            <div class="conteudo-nome-email">
+                <div class="saudacao">Olá, <span id="nome_saudacao">Lucas</span></div>
+                <span id="email_saudacao">lucas.flima@sptech.school</span>
+            </div>
+            <div class="conteudo-opcoes">
+                <span><a href="">Gerenciar conta</a></span>
+                <span>Estatísticas detalhadas</span>
+                <span><a href="">Votação</a></span>
+            </div>
+            <div class="logout">
+                <a href="../../Page Login/paginalogin.html">Fazer logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="body_graficos">
+
+        <div class="container">
+
+            <div class="setinha-voltar" onclick="voltar_estatistica()">&#10094;</div>
+            <div class="graficos">
+                <div class="imagem_lateral"><img src="../../../assets/messi-vertical-dash.jpg" alt=""></div>
+
+                <div class="conteudo_graficos">
+
+                    <div class="blocos_titulos">
+
+                        <div onclick="escolher_grafico(1)" class="titulos">
+                            <span>Gols por temporada</span>
+                            <div class="icons_titulos"><img src="../../../assets/icon-futebol.png"></div>
+                        </div>
+                        <div onclick="escolher_grafico(2)" class="titulos">
+                            <span>Assistências por temporada</span>
+                            <div class="icons_titulos"><img src="../../../assets/icon-chuteira.png"></div>
+                        </div>
+                        <div onclick="escolher_grafico(3)" class="titulos">
+                            <span>Participações de gol por temporada</span>
+                            <div class="icons_titulos"><img src="../../../assets/icon-futebol.png">+<img src="../../../assets/icon-chuteira.png"></div>
+                        </div>
+                        <div onclick="escolher_grafico(4)" class="titulos">
+                            <span>Gols pela seleção</span>
+                            <div class="icons_titulos" id="gols_pela_selecao"><img src="../../../assets/icon-futebol.png"></div>
+                        </div>
+                        <div onclick="escolher_grafico(5)" class="titulos">
+                            <span>Assistências pela seleção</span>
+                            <div class="icons_titulos"><img src="../../../assets/icon-chuteira.png"></div>
+                        </div>
+                    </div>
+                    <div class="graficos_canvas">
+                        <canvas id="grafico1"></canvas>
+                        <canvas id="grafico2"></canvas>
+                        <canvas id="grafico3"></canvas>
+                        <canvas id="grafico4"></canvas>
+                        <canvas id="grafico5"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--<div class="body-graficos">
+        <div class="container">
+            <div class="conteudo-graficos">
+                <div class="setinha-voltar" onclick="voltar_estatistica()">&#10094;</div>
+                <div class="titulo-conteudo-graficos">MESSI</div>
+
+                <div class="grafico">
+                    <div class="titulo-grafico">GOLS POR TEMPORADA</div>
+                    <canvas id="grafico1"></canvas>
+                </div>
+
+                <div class="grafico">
+                    <div class="titulo-grafico">ASSISTÊNCIAS POR TEMPORADA</div>
+                    <canvas id="grafico2"></canvas>
+                </div>
+
+                <div class="grafico">
+                    <div class="titulo-grafico">PARTICIPAÇÕES DE GOL POR TEMPORADA</div>
+                    <canvas id="grafico3"></canvas>
+                </div>
+
+                <div class="grafico">
+                    <div class="titulo-grafico">GOLS PELA SELEÇÃO</div>
+                    <canvas id="grafico4"></canvas>
+                </div>
+
+                <div class="grafico">
+                    <div class="titulo-grafico">ASSISTÊNCIAS PELA SELEÇÃO</div>
+                    <canvas id="grafico5"></canvas>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <div class="footer">
+            Copyright © 2023 - 2023 Mundinho Messi. Todos os direitos reservados. | Termos de uso | Política de
+            privacidade | Definições de cookies | Mapa do site
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script type="text/javascript" src="./script-chart.js"></script>

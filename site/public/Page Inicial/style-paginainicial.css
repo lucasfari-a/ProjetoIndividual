@@ -1,0 +1,252 @@
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
+* {
+  font-family: Poppins;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #00000019, #fdb1000e, #0000002c);
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+li {
+  list-style: none;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48,
+    "font-size" 10px;
+  margin-top: 18%;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-conteudo {
+  display: flex;
+  width: 100%;
+  height: 47px;
+  align-items: center;
+  margin-left: 23%;
+}
+
+.header-conteudo li {
+  margin-left: 2%;
+}
+
+.icones-header {
+  margin-left: 50%;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.conteudo_home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 8.5%;
+  font-size: 20px;
+  font-weight: 800;
+  width: 35%;
+  letter-spacing: 1px;
+}
+
+.titulo_home {
+  color: white;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  margin-top: -6%;
+  margin-bottom: -1%;
+}
+#lionel_titulo {
+  font-size: 40px;
+}
+
+#messi_titulo {
+  font-size: 50px;
+  color: #e6af2e;
+}
+
+.texto_home div {
+  margin-bottom: 3.5%;
+}
+#span_genio {
+  color: #e6af2e;
+}
+#span_eterno {
+  color: #e6af2e;
+}
+
+.botao button {
+  margin-top: 5%;
+  width: 50%;
+  text-align: center;
+  background-color: #e6af2e;
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.botao button:hover {
+  font-size: 14px;
+}
+
+.footer_home {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background-color: #e6af2e4d;
+  backdrop-filter: blur(5px);
+  margin-top: 5%;
+  height: 20%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.footer_home img {
+  width: 35px;
+  height: 35px;
+  opacity: 100%;
+}
+
+.esquerda_home {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+
+.footer_home span {
+  margin-left: 5%;
+}
+
+.primeira_linha {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10%;
+}
+
+.segunda_linha {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.direita_home {
+  display: flex;
+  flex-direction: column;
+  margin-left: 60%;
+  width: 20%;
+}
+
+/* menu flutuante */
+
+.bloco_flutuante {
+  display: none;
+  flex-direction: column;
+  background-color: #e6af2e;
+  border-radius: 10px;
+  color: black;
+  position: absolute;
+  z-index: 2;
+  width: 15%;
+  top: 8%;
+  left: 75%;
+  font-size: 11px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.conteudo-nome-email {
+  width: 80%;
+  margin-left: 5%;
+  margin-top: 3%;
+  border-bottom: black solid 1px;
+}
+
+.saudacao {
+  font-size: 14px;
+}
+
+.conteudo-opcoes {
+  width: 70%;
+  margin: 10% 0 5% 5%;
+}
+
+.logout {
+  width: 40%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+
+.bloco_flutuante a {
+  text-decoration: none;
+  color: black;
+}
