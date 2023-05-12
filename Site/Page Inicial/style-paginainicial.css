@@ -27,17 +27,16 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 1));
+    background-image: linear-gradient(to right, #00000019, #fdb1000e, #0000002c);
   }
   
   .banner img {
-    width: 100vw;
-    height: 100vh;
     position: absolute;
-    opacity: 100%;
-    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-
 li {
     list-style: none;
 }
@@ -89,8 +88,8 @@ a {
     display: flex;
     width: 100%;
     height: 47px;
-    justify-content: flex-end;
     align-items: center;
+    margin-left: 23%;
 }
 
 .header-conteudo li {
@@ -98,7 +97,7 @@ a {
 }
 
 .icones-header {
-    margin-left: 2%;
+    margin-left: 55%;
 }
 
 button {
@@ -106,89 +105,153 @@ button {
     cursor: pointer;
 }
 
-.conteudo-banner {
+.conteudo_home {
     display: flex;
     justify-content: center;
-}
-
-.titulo-conteudo-banner {
-    display: flex;
-    align-self: center;
-    margin-top: 15%;
-}
-
-.conteudo-banner-esquerda {
-    display: flex;
     flex-direction: column;
-    width: 30%;
-}
-
-.escrita-banner-esquerda {
+    margin-top: 8.5%;
     font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
+    font-weight: 800;
+    width: 35%;
+    letter-spacing: 1px;
 }
 
-#span-genio {
+.titulo_home{
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    margin-top: -6%;
+    margin-bottom: -1%;
+}
+#lionel_titulo {
+    font-size: 40px;
+}
+
+#messi_titulo {
+    font-size: 50px;
     color: #E6AF2E;
 }
-#span-eterno {
-    color: #E6AF2E
+
+.texto_home div {
+    margin-bottom: 3.5%;
+}
+#span_genio {
+    color: #E6AF2E;
+}
+#span_eterno {
+    color: #E6AF2E;
 }
 
-.conteudo-banner-direita {
-    display: flex;
-    flex-direction: ROW;
-    justify-content: space-evenly;
-    width: 40%;
-    height: 10%;
-    margin-left: 40%;
-    margin-top: 5.7%
-}
-
-.conteudo-banner-direita h2 {
-    margin: 0 0 0.5em 0;
-}
-
-.gols {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.ballon-dor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.conteudo-banner-direita p {
-    align-self: center;
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.botao-paginainicial {
-    margin-top: 10%;
-    display: flex;
-    width: 70%;
-}
-
-.botao-paginainicial button {
-    padding: 6px 12px;
-    font-size: 15px;
-    font-weight: 600;
-    border-radius: 5px;
+.botao button {
+    margin-top: 5%;
+    width: 50%;
     text-align: center;
+    background-color: #E6AF2E;
     color: black;
-    background-color: #80B7F9;
-    width: 100%;
-    transition: background-color 0.3s cubic-bezier(0.42, 0, 0.58, 1), color 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+    font-size: 15px;
+    font-weight: 700;
+    height: 50px;
+    border-radius: 10px;
 }
 
-.botao-paginainicial button:hover {
-    background-color: #1D4E89;
-    color: #ffffff;
-  }
+.botao button:hover {
+    font-size: 14px;
+}
+
+.footer_home {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: #e6af2e4d;
+    backdrop-filter: blur(5px);
+    margin-top: 5%;
+    height: 20%;
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.footer_home img {
+    width: 35px;
+    height: 35px;
+    opacity: 100%;
+}
+
+.esquerda_home {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.footer_home span {
+    margin-left: 5%;
+}
+
+.primeira_linha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10%;
+}
+
+.segunda_linha {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.direita_home {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60%;
+    width: 20%;
+}
+
+  /* menu flutuante */
+
+  .bloco_flutuante {
+    display: none;
+    flex-direction: column;
+    background-color: #E6AF2E;
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    z-index: 2;
+    width: 15%;
+    top: 8%;
+    left: 75%;
+    font-size: 11px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.conteudo-nome-email {
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border-bottom: black solid 1px;
+}
+
+.saudacao {
+    font-size: 14px;
+}
+
+.conteudo-opcoes {
+    width: 70%;
+    margin: 10% 0 5% 5%;
+}
+
+.logout {
+    width: 40%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.bloco_flutuante a {
+    text-decoration: none;
+    color: black;
+}

@@ -92,11 +92,11 @@ button {
 
 /* MINI-BIOGRAFIA */
 .body-estatistica {
-    background-color: #1D4E89;
+    background: linear-gradient(#08335a, #08335a, #9EC3E6, #08335a, #08335a, #08335a);
 }
 
 .conteudoestatistica {
-    background-color: #1D4E89;
+    background-color: #08335a;
     display: flex;
     flex-direction: column;
 }
@@ -277,15 +277,7 @@ button {
     z-index: 2;
     top: 82%;
 }
-
-
-@media (min-width: 1365px) {
-    .tag-campeao {
-        top: 75%;
-    }
-}
     
-
 .champions-league {
     left: 53.5%;
 }
@@ -364,7 +356,14 @@ button {
     left: 70.5%;
 }
 
-
+@media (min-width: 1365px) {
+    .tag-campeao {
+        top: 75%;
+    }
+    .tag-premio {
+        top: 75%
+    }
+}
 
 /* RESUMO PREMIOS INDIVIDUAIS */
 

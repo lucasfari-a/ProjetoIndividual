@@ -92,7 +92,7 @@ button {
 .body_graficos {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(#08335a, #ffffff);
+    background: linear-gradient(#08335a, white);
     justify-content: center;
 }
 
@@ -173,7 +173,7 @@ button {
 
 @media (min-width: 1365px){
     .graficos_canvas {
-        height: 55.9vh;
+        height: 80.5%;
     }   
 }
 

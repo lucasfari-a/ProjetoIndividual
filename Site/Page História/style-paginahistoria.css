@@ -82,6 +82,10 @@ button {
     width: 100%;
 }
 
+.body_historia {
+    background: linear-gradient(#08335a, #ffffff);
+}
+
 /* INFANCIA E JUVENTUDE */
 
 .infancia-juventude {
@@ -91,6 +95,7 @@ button {
     padding: 3% 6%;
     border-radius: 10px;
     color: white;
+    margin-top: 5%;
 }
 
 .titulo-inf-juv {
