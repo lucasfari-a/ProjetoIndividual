@@ -31,8 +31,22 @@ function cadastrar(nome, sobrenome, email, senha) {
     return database.executar(instrucao);
 }
 
+function verificaremail(email) {
+    var instrucao = `SELECT * FROM usuario WHERE email = '${email}'`;
+    console.log("Executando verificação de e-mail: \n" + instrucao);
+    return database.executar(instrucao);
+  }
+  
+function finalizar(resp1) {
+    var instrucao = `insert into respostas (pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, fkUsuario) values (${resp1}, 1);`
+    console.log("Executando envio das respostas: \n" + instrucao)
+    return database.executar(instrucao)
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    verificaremail,
+    finalizar
 };

@@ -46,7 +46,8 @@ function entrar() {
             });
 
         } else {
-
+            msgErro.style.display = "block"
+            msgErro.innerHTML = "E-mail ou senha inválido";
             console.log("Houve um erro ao tentar realizar o login!");
 
             resposta.text().then(texto => {

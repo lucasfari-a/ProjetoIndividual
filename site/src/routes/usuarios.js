@@ -20,4 +20,12 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/verificaremail", function(req,res){
+    usuarioController.verificaremail(req,res);
+})
+
+router.post("/enviarrespostas", function(req,res){
+    usuarioController.finalizar(req,res);
+})
+
 module.exports = router;

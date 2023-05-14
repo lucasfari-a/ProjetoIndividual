@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/funcoes.js"></script>
+    <link rel="stylesheet" href="../cssGlobal/menuflutuante.css">
+    <link rel="stylesheet" href="style-paginavotacao.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>LM10 - Votação</title>
+</head>
+
+<body onload="validarSessao()">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/logoprovisorio.png" alt="">
+            </div>
+
+            <div class="header-conteudo">
+                <li class="li-header"><a href="../Page Inicial/paginainicial.html">Home</a></li>
+                <li class="li-header"><a href="../Page História/paginahistoria.html">História</a></li>
+                <li class="li-header"><a href="../Page Estatistica/paginaestatisticas.html">Títulos</b></li>
+                <li class="li-header" id="link_sobre_mim"><a>Sobre mim</a></li>
+                <li class="li-header>">|</li>
+
+                <div class="icones-header">
+                    <span id="usericon" class="material-symbols-outlined">account_circle</span>
+                    <button onclick="abrir_menu_flutuante()" id="setaicon"
+                        class="material-symbols-outlined">keyboard_arrow_down</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bloco_flutuante" id="bloco_flutuante">
+        <div class="conteudo-bloco-flutuante">
+            <div class="conteudo-nome-email">
+            <div class="saudacao">Olá, <span id="nome_saudacao">Lucas</span></div>
+            <span id="email_saudacao">lucas.flima@sptech.school</span>
+            </div>
+            <div class="conteudo-opcoes">
+                <span><a href="">Gerenciar conta</a></span>
+                <span><a href="../Page Estatistica/Page Detalhes Estatística/paginadetalhe.html">Estatísticas detalhadas</a></span>
+                <span><a href="../PageVotacao/paginavotacao.html">Votação</a></span>
+            </div>
+            <div class="logout">
+                <a href="../Page Login/paginalogin.html">Fazer logout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner"><img src="../assets/messi-beijandotaca2.webp" alt=""></div>
+
+
+    <div class="body_votacao">
+
+        <div class="conteudo_votacao" id="pergunta1" style="display: flex;">
+            <div class="container_votacao">
+                <div class="superior_votacao">
+                    <div class="titulo_votacao">PERGUNTAS</div>
+                    <div class="subtitulo_votacao">(Na sua opinião)</div>
+                </div>
+
+                <div class="pergunta_votacao">Qual a melhor temporada do Messi?</div>
+
+                <div class="respostas_votacao">
+                    <div class="respostas">
+                        <input type="radio" name="resposta1" value="1">
+                        <label for="1">a) 2010-11 (Despertar do gênio)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta1" value="2">
+                        <label for="2">b) 2011-12 (Auge estatístico)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta1" value="3">
+                        <label for="3">c) 2014-15 (Trio MSN)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta1" value="4">
+                        <label for="4">d) 2018-19 (<i>Messidependência</i>)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta1" value="5">
+                        <label for="5">e) 2021-22 (Supremacia futebolística alcançada)</label>
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="proxima_questao()">Próxima questão</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo_votacao" id="pergunta2" style="display: none;">
+            <div class="container_votacao">
+                <div class="superior_votacao">
+                    <div class="titulo_votacao">PERGUNTAS</div>
+                    <div class="subtitulo_votacao">(Na sua opinião)</div>
+                </div>
+
+                <div class="pergunta_votacao">Qual gol mais bonito do Messi?</div>
+
+                <div class="respostas_votacao">
+                    <div class="respostas">
+                        <input type="radio" name="resposta2" value="1">
+                        <label for="1">a) Falta contra o Liverpool (Champions 2019)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta2" value="2">
+                        <label for="2">b) Real Madrid (Champions 2011)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta2" value="3">
+                        <label for="3">c) Getafe (LaLiga 2007)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta2" value="4">
+                        <label for="4">d) Bayern Munchen (Champions 2015)</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta2" value="5">
+                        <label for="5">e) Athletico Bilbao (Copa del Rey 2015)</label>
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="proxima_questao()">Próxima questão</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo_votacao" id="pergunta3" style="display: none;">
+            <div class="container_votacao">
+                <div class="superior_votacao">
+                    <div class="titulo_votacao">PERGUNTAS</div>
+                    <div class="subtitulo_votacao">(Na sua opinião)</div>
+                </div>
+
+                <div class="pergunta_votacao">Qual título do Messi você mais vibrou?</div>
+
+                <div class="respostas_votacao">
+                    <div class="respostas">
+                        <input type="radio" name="resposta3" value="1">
+                        <label for="1">a) Copa do Mundo 2022</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta3" value="2">
+                        <label for="2">b) Champions League 2015</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta3" value="3">
+                        <label for="3">c) Champions League 2011</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta3" value="4">
+                        <label for="4">d) Copa Del Rey 2015</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta3" value="5">
+                        <label for="5">e) Copa América 2021</label>
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="proxima_questao()">Próxima questão</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo_votacao" id="pergunta4" style="display: none;">
+            <div class="container_votacao">
+                <div class="superior_votacao">
+                    <div class="titulo_votacao">PERGUNTAS</div>
+                    <div class="subtitulo_votacao">(Na sua opinião)</div>
+                </div>
+
+                <div class="pergunta_votacao">Qual a melhor qualidade do Messi?</div>
+
+                <div class="respostas_votacao">
+                    <div class="respostas">
+                        <input type="radio" name="resposta4" value="1">
+                        <label for="1">a) Drible e agilidade</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta4" value="2">
+                        <label for="2">b) Bola parada</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta4" value="3">
+                        <label for="3">c) Chute</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta4" value="4">
+                        <label for="4">d) Inteligência</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta4" value="5">
+                        <label for="5">e) Visão de jogo</label>
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="proxima_questao()">Próxima questão</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo_votacao" id="pergunta5" style="display: none;">
+            <div class="container_votacao">
+                <div class="superior_votacao">
+                    <div class="titulo_votacao">PERGUNTAS</div>
+                    <div class="subtitulo_votacao">(Na sua opinião)</div>
+                </div>
+
+                <div class="pergunta_votacao">Messi irá se aposentar em qual time?</div>
+
+                <div class="respostas_votacao">
+                    <div class="respostas">
+                        <input type="radio" name="resposta5" value="1">
+                        <label for="1">a) Paris Saint Germain</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta5" value="2">
+                        <label for="2">b) FC Barcelona</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta5" value="3">
+                        <label for="3">c) Newells Old Boys</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta5" value="4">
+                        <label for="4">d) Liga Americana</label>
+                    </div>
+
+                    <div class="respostas">
+                        <input type="radio" name="resposta5" value="5">
+                        <label for="5">e) Liga árabe</label>
+                    </div>
+
+                    <div class="botao">
+                        <button onclick="proxima_questao()">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="escolher_grafico" id="div_escolher_grafico" style="display: none;">
+            <div class="container_votacao_grafico">
+                <div class="superior_votacao_grafico">
+                    <div class="titulo_votacao_grafico">Selecione a pergunta que você quer ver as respostas.</div>
+                </div>
+
+                <div class="boxes_perguntas">
+                    <div class="box" onclick="escolher_pergunta(1)">
+                        <span class="numero_box">1</span>
+                        <span class="texto_box">Qual a melhor temporada do Messi?</span>
+                    </div>
+
+                    <div class="box" onclick="escolher_pergunta(2)">
+                        <span class="numero_box">2</span>
+                        <span class="texto_box">Qual o gol mais bonito do Messi?</span>
+                    </div>
+                    
+                    <div class="box" onclick="escolher_pergunta(3)">
+                        <span class="numero_box">3</span>
+                        <span class="texto_box">Qual título você mais vibrou?</span>
+                    </div>
+
+                    <div class="box" onclick="escolher_pergunta(4)">
+                        <span class="numero_box">4</span>
+                        <span class="texto_box">Qual a melhor qualidade do Messi?</span>
+                    </div>
+
+                    <div class="box" onclick="escolher_pergunta(5)">
+                        <span class="numero_box">5</span>
+                        <span class="texto_box">Onde o Messi irá se aposentar?</span>
+                    </div>
+                </div>
+
+                <div class="botao">
+                    <button onclick="sair_votacao()">SAIR</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grafico" id="div_grafico" style="display: none;">
+            <div class="container_votacao_grafico">
+                <div class="superior_grafico">
+                    <div class="pergunta_selecionada" id="pergunta_selecionada">Qual a melhor temporada do Messi?</div>
+                </div>
+
+                <div class="grafico_selecionado">
+                    <canvas id="grafico_final"></canvas>
+                </div>
+
+                <div class="botao">
+                    <button onclick="voltar_perguntas()">VOLTAR</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script src="./script.js"></script>

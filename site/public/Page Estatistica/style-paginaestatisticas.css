@@ -365,6 +365,15 @@ button {
     }
 }
 
+@media (max-height: 635px) {
+    .tag-campeao {
+        top: 75%;
+    }
+    .tag-premio {
+        top: 75%
+    }
+}
+
 /* RESUMO PREMIOS INDIVIDUAIS */
 
 .resumo-titulo-individual {
