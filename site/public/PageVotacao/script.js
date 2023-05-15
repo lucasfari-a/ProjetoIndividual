@@ -96,10 +96,10 @@ const labels = [
 
 
 const resposta_pergunta1 = [1, 2, 3, 4, 5];
-const resposta_pergunta2 = [9, 9, 9, 9, 9];
-const resposta_pergunta3 = [7, 7, 7, 7, 7];
-const resposta_pergunta4 = [3, 3, 3, 3, 3];
-const resposta_pergunta5 = [5, 5, 5, 5, 5];
+const resposta_pergunta2 = [3,8,4,2,1];
+const resposta_pergunta3 = [9,3,12,5,2];
+const resposta_pergunta4 = [9,5,3,21,4];
+const resposta_pergunta5 = [1,10,1,10,1];
 const qtd_respostas_pergunta = [resposta_pergunta1, resposta_pergunta2, resposta_pergunta3, resposta_pergunta4, resposta_pergunta5];
 
 function atualizar_grafico_pergunta(n) {

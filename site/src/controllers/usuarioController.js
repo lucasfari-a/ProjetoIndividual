@@ -159,6 +159,7 @@ function escolher_pergunta(req, res) {
         .escolher_pergunta(respostas_select)
         .then(function (resultado) {
           if (resultado.length > 0) {
+            console.log(resultado)
             res.json({ respostas_recebidas: true });
           } else {
             res.json({ respostas_recebidas: false });
