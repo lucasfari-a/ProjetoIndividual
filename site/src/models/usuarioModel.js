@@ -45,11 +45,11 @@ function finalizar(resp1) {
 
 function escolher_pergunta(respostas_select) {
     return new Promise(function(resolve, reject) {
-      var instrucao = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 1;`;
-      var instrucao2 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 2;`;
-      var instrucao3 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 3;`;
-      var instrucao4 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 4;`;
-      var instrucao5 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 5;`;
+      var instrucao = `select count(Pergunta${respostas_select}) as qtd from respostas where Pergunta${respostas_select} = 1;`;
+      var instrucao2 = `select count(Pergunta${respostas_select}) as qtd from respostas where Pergunta${respostas_select} = 2;`;
+      var instrucao3 = `select count(Pergunta${respostas_select}) as qtd from respostas where Pergunta${respostas_select} = 3;`;
+      var instrucao4 = `select count(Pergunta${respostas_select}) as qtd from respostas where Pergunta${respostas_select} = 4;`;
+      var instrucao5 = `select count(Pergunta${respostas_select}) as qtd from respostas where Pergunta${respostas_select} = 5;`;
   
       console.log(
         "Executando select das respostas: \n" +

@@ -160,7 +160,7 @@ function escolher_pergunta(req, res) {
         .then(function (resultado) {
           if (resultado.length > 0) {
             console.log(resultado)
-            res.json({ respostas_recebidas: true });
+            res.json(resultado);
           } else {
             res.json({ respostas_recebidas: false });
           }

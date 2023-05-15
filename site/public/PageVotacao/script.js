@@ -95,7 +95,7 @@ const labels = [
 /* GRÁFICO */
 
 
-const resposta_pergunta1 = [1, 2, 3, 4, 5];
+const resposta_pergunta1 = [];
 const resposta_pergunta2 = [3,8,4,2,1];
 const resposta_pergunta3 = [9,3,12,5,2];
 const resposta_pergunta4 = [9,5,3,21,4];
@@ -242,7 +242,14 @@ function escolher_pergunta(n) {
     })
       .then(function (resposta) {
         if (resposta.ok) {
-          return resposta.json(); // Parse JSON response
+          resposta.json().then(json=>{
+           resposta_pergunta1.push(json[0][0].qtd) 
+           resposta_pergunta1.push(json[1][0].qtd)
+           resposta_pergunta1.push(json[2][0].qtd)
+           resposta_pergunta1.push(json[3][0].qtd)
+           resposta_pergunta1.push(json[4][0].qtd)     
+           console.log(json)
+          })
         } else {
           throw new Error("Houve um erro ao receber os dados");
         }
