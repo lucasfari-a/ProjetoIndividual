@@ -43,10 +43,47 @@ function finalizar(resp1) {
     return database.executar(instrucao)
 }
 
+function escolher_pergunta(respostas_select) {
+    return new Promise(function(resolve, reject) {
+      var instrucao = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 1;`;
+      var instrucao2 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 2;`;
+      var instrucao3 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 3;`;
+      var instrucao4 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 4;`;
+      var instrucao5 = `select count(Pergunta${respostas_select}) from respostas where Pergunta${respostas_select} = 5;`;
+  
+      console.log(
+        "Executando select das respostas: \n" +
+          instrucao,
+        instrucao2,
+        instrucao3,
+        instrucao4,
+        instrucao5
+      );
+  
+      var resultados_respostas = [];
+  
+      resultados_respostas.push(database.executar(instrucao));
+      resultados_respostas.push(database.executar(instrucao2));
+      resultados_respostas.push(database.executar(instrucao3));
+      resultados_respostas.push(database.executar(instrucao4));
+      resultados_respostas.push(database.executar(instrucao5));
+  
+      Promise.all(resultados_respostas)
+        .then(function(res) {
+          resolve(res);
+        })
+        .catch(function(error) {
+          reject(error);
+        });
+    });
+  }
+  
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     verificaremail,
-    finalizar
+    finalizar,
+    escolher_pergunta
 };

@@ -148,6 +148,32 @@ function finalizar(req, res) {
         });
     }
 }
+
+function escolher_pergunta(req, res) {
+    var respostas_select = req.body.respostas_selectServer
+  
+    if (respostas_select == undefined) {
+      res.status(400).send("Respostas incompletas");
+    } else {
+      usuarioModel
+        .escolher_pergunta(respostas_select)
+        .then(function (resultado) {
+          if (resultado.length > 0) {
+            res.json({ respostas_recebidas: true });
+          } else {
+            res.json({ respostas_recebidas: false });
+          }
+        })
+        .catch(function (erro) {
+          console.log(erro);
+          console.log(
+            "\nHouver um erro ao receber as respostas: ",
+            erro.sqlMessage
+          );
+          res.status(500).json(erro.sqlMessage);
+        });
+    }
+}
   
 module.exports = {
     entrar,
@@ -155,5 +181,6 @@ module.exports = {
     listar,
     testar,
     verificaremail,
-    finalizar
+    finalizar,
+    escolher_pergunta
 }

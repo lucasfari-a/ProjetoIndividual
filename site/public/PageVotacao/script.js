@@ -12,20 +12,6 @@ function sair_votacao() {
     window.location.href = `../Page Inicial/paginainicial.html`
 }
 
-function escolher_pergunta(n) {
-    div_escolher_grafico.style.display = `none`
-    div_grafico.style.display = `flex`
-    atualizar_grafico_pergunta(n)
-
-}
-
-function atualizar_grafico_pergunta(n) {
-    const qtd_respostas_pergunta = respostas[n - 1];
-    data_pergunta.datasets[0].data = qtd_respostas_pergunta;
-    grafico_pergunta.update();
-}
-
-
 function voltar_perguntas() {
     div_grafico.style.display = `none`
     div_escolher_grafico.style.display = `flex`
@@ -43,6 +29,7 @@ const grafico_final = document.getElementById("grafico_final")
 var cliques = 0;
 
 var respostas = [];
+var respostas_select = [];
 
 function proxima_questao() {
     cliques += 1;
@@ -95,34 +82,6 @@ function obter_resposta(resposta_id) {
     console.log(`Respostas: ${respostas}`)
 }
 
-function finalizar() {
-
-    fetch("/usuarios/enviarrespostas", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          respostasServer: respostas,
-        })
-      })
-      .then(function(resposta) {
-        if (resposta.ok) {
-          setTimeout(function() {
-            div_escolher_grafico.style.display = `flex`
-          }, 100);
-
-        } else {
-          throw new Error("Houve um erro ao enviar os dados");
-        }
-      })
-      .catch(function(resposta) {
-        console.log("#ERRO: " + resposta);
-      });
-
-      return false;
-}
-
 /* CHARTJS - GRÁFICO RESPOSTAS PERGUNTAS */
 
 const labels = [
@@ -135,13 +94,26 @@ const labels = [
 
 /* GRÁFICO */
 
-const qtd_respostas_pergunta = respostas;
+
+const resposta_pergunta1 = [1, 2, 3, 4, 5];
+const resposta_pergunta2 = [9, 9, 9, 9, 9];
+const resposta_pergunta3 = [7, 7, 7, 7, 7];
+const resposta_pergunta4 = [3, 3, 3, 3, 3];
+const resposta_pergunta5 = [5, 5, 5, 5, 5];
+const qtd_respostas_pergunta = [resposta_pergunta1, resposta_pergunta2, resposta_pergunta3, resposta_pergunta4, resposta_pergunta5];
+
+function atualizar_grafico_pergunta(n) {
+  const atualizacao_grafico = qtd_respostas_pergunta[n - 1];
+  data_pergunta.datasets[0].data = atualizacao_grafico;
+  grafico_pergunta.update();
+}
+
 
 const data_pergunta = {
     labels: labels,
     datasets: [{
         label: 'Qtd. Respostas',
-        data: qtd_respostas_pergunta,
+        data: resposta_pergunta1,
         backgroundColor: '#880C0A',
         borderColor: 'black',
         borderWidth: 1
@@ -214,5 +186,90 @@ const grafico_pergunta = new Chart(grafico_final, config_pergunta);
 
 /* CONEXAO BANCO DE DADOS */
 
+function finalizar() {
+
+    fetch("/usuarios/enviarrespostas", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          respostasServer: respostas,
+        })
+      })
+      .then(function(resposta) {
+        if (resposta.ok) {
+          setTimeout(function() {
+            div_escolher_grafico.style.display = `flex`
+          }, 100);
+
+        } else {
+          throw new Error("Houve um erro ao enviar os dados");
+        }
+      })
+      .catch(function(resposta) {
+        console.log("#ERRO: " + resposta);
+      });
+
+      return false;
+}
+
+function escolher_pergunta(n) {
+    div_escolher_grafico.style.display = `none`;
+    div_grafico.style.display = `flex`;
+    atualizar_grafico_pergunta(n);
+  
+    if (n == 1) {
+      respostas_select = n;
+    } else if (n == 2) {
+      respostas_select = n;
+    } else if (n == 3) {
+      respostas_select = n;
+    } else if (n == 4) {
+      respostas_select = n;
+    } else {
+      respostas_select = n;
+    }
+  
+    fetch("/usuarios/receberrespostas", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        respostas_selectServer: respostas_select,
+      })
+    })
+      .then(function (resposta) {
+        if (resposta.ok) {
+          return resposta.json(); // Parse JSON response
+        } else {
+          throw new Error("Houve um erro ao receber os dados");
+        }
+      })
+      .then(function () {
+        setTimeout(function () {
+          div_grafico.style.display = `flex`;
+        }, 100);
+      })
+      .catch(function (error) {
+        console.log("#ERRO: " + error);
+      });
+  
+    return false;
+  }
+  
+
+    switch(n){
+        case 1:
+
+        case 2:
+
+        case 3:
+
+        case 4:
+
+        case 5:
+}
 
 

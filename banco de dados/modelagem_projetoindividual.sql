@@ -23,7 +23,14 @@ desc usuario;
 
 select * from usuario;
 select * from respostas;
-select count(Pergunta5) from respostas where pergunta5 = 5;
+
+select count(pergunta1) from respostas where pergunta1 = 5;
+select count(n) from respostas where n = 2;
+select count(n) from respostas where n = 3;
+select count(n) from respostas where n = 4;
+select count(pergunta1) from respostas where pergunta1 = 1;
+
+select count(Pergunta1) from respostas where pergunta1 = 5;
 
 select count(pergunta3) from respostas where pergunta5 = 1;
 

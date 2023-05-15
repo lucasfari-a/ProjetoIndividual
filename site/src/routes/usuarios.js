@@ -28,4 +28,8 @@ router.post("/enviarrespostas", function(req,res){
     usuarioController.finalizar(req,res);
 })
 
+router.post("/receberrespostas", function(req,res){
+    usuarioController.escolher_pergunta(req,res);
+})
+
 module.exports = router;
