@@ -218,17 +218,7 @@ function escolher_pergunta(n) {
   div_escolher_grafico.style.display = `none`;
   div_grafico.style.display = `flex`;
 
-  if (n == 1) {
-    respostas_select = n;
-  } else if (n == 2) {
-    respostas_select = n;
-  } else if (n == 3) {
-    respostas_select = n;
-  } else if (n == 4) {
-    respostas_select = n;
-  } else {
-    respostas_select = n;
-  }
+  respostas_select = n;
 
   fetch("/usuarios/receberrespostas", {
     method: "POST",
