@@ -32,4 +32,12 @@ router.post("/receberrespostas", function(req,res){
     usuarioController.escolher_pergunta(req,res);
 })
 
+router.post("/atualizaremail", function(req,res){
+    usuarioController.enviar_alteracao_email(req,res);
+})
+
+router.post("/atualizarsenha", function(req,res){
+    usuarioController.enviar_alteracao_senha(req,res);
+})
+
 module.exports = router;

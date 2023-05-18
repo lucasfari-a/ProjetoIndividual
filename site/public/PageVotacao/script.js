@@ -8,6 +8,11 @@ function abrir_menu_flutuante() {
   }
 }
 
+function iniciar_perguntas(){
+  pergunta1.style.display = `flex`;
+  div_escolher_grafico.style.display = `none`;
+}
+
 function sair_votacao() {
   window.location.href = `../Page Inicial/paginainicial.html`
 }
@@ -195,6 +200,7 @@ function finalizar() {
     },
     body: JSON.stringify({
       respostasServer: respostas,
+      idServer: sessionStorage.ID_USUARIO,
     })
   })
     .then(function (resposta) {

@@ -301,11 +301,23 @@ button {
 
 .escolher_grafico .botao {
     margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .escolher_grafico .botao button {
     background-color: red;
     color: white;
+}
+
+#botao_perguntas {
+    background-color: #E6AF2E;
+    color: black;
+}
+
+#botao_perguntas:hover {
+    font-size: 18px;
 }
 
 .escolher_grafico .botao button:hover {

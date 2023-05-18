@@ -46,7 +46,7 @@
             <span id="email_saudacao">lucas.flima@sptech.school</span>
             </div>
             <div class="conteudo-opcoes">
-                <span><a href="">Gerenciar conta</a></span>
+                <span><a href="../PageGerenciarConta/paginagerenciarconta.html">Gerenciar conta</a></span>
                 <span><a href="../Page Estatistica/Page Detalhes Estatística/paginadetalhe.html">Estatísticas detalhadas</a></span>
                 <span><a href="../PageVotacao/paginavotacao.html">Votação</a></span>
             </div>
@@ -61,10 +61,10 @@
 
     <div class="body_votacao">
 
-        <div class="conteudo_votacao" id="pergunta1" style="display: flex;">
+        <div class="conteudo_votacao" id="pergunta1" style="display: none;">
             <div class="container_votacao">
                 <div class="superior_votacao">
-                    <div class="titulo_votacao">PERGUNTAS</div>
+                    <div class="titulo_votacao">PESQUISA</div>
                     <div class="subtitulo_votacao">(Na sua opinião)</div>
                 </div>
 
@@ -271,7 +271,7 @@
             </div>
         </div>
 
-        <div class="escolher_grafico" id="div_escolher_grafico" style="display: none;">
+        <div class="escolher_grafico" id="div_escolher_grafico" style="display: flex;">
             <div class="container_votacao_grafico">
                 <div class="superior_votacao_grafico">
                     <div class="titulo_votacao_grafico">Selecione a pergunta que você quer ver as respostas.</div>
@@ -305,8 +305,10 @@
                 </div>
 
                 <div class="botao">
+                    <button id="botao_perguntas" onclick="iniciar_perguntas()">RESPONDER</button>
                     <button onclick="sair_votacao()">SAIR</button>
                 </div>
+
             </div>
         </div>
 

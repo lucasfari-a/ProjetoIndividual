@@ -37,8 +37,8 @@ function verificaremail(email) {
     return database.executar(instrucao);
   }
   
-function finalizar(resp1) {
-    var instrucao = `insert into respostas (pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, fkUsuario) values (${resp1}, 1);`
+function finalizar(resp1, id) {
+    var instrucao = `insert into respostas (pergunta1, pergunta2, pergunta3, pergunta4, pergunta5, fkUsuario) values (${resp1}, ${id});`
     console.log("Executando envio das respostas: \n" + instrucao)
     return database.executar(instrucao)
 }
@@ -78,6 +78,23 @@ function escolher_pergunta(respostas_select) {
     });
   }
   
+function enviar_alteracao_email(email, id) {
+  var instrucao = `update usuario set email = '${email}' where idUsuario = ${id};`
+  console.log(
+    "Executando alteração de e-mail: \n" +
+      instrucao
+  );
+  return database.executar(instrucao);
+}
+
+function enviar_alteracao_senha(senha, id) {
+  var instrucao = `update usuario set senha = sha2('${senha}', 256) where idUsuario = ${id};`
+  console.log(
+    "Executando alteração de senha: \n" +
+      instrucao
+  );
+  return database.executar(instrucao);
+}
 
 module.exports = {
     entrar,
@@ -85,5 +102,7 @@ module.exports = {
     listar,
     verificaremail,
     finalizar,
-    escolher_pergunta
+    escolher_pergunta,
+    enviar_alteracao_email,
+    enviar_alteracao_senha
 };

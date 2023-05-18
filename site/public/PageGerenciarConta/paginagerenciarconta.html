@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/funcoes.js"></script>
+    <link rel="stylesheet" href="../cssGlobal/menuflutuante.css">
+    <link rel="stylesheet" href="style-gerenciarconta.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>LM10 - Gerenciar Conta</title>
+</head>
+<body onload="validarSessao()">
+
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/logoprovisorio.png" alt="">
+            </div>
+
+            <div class="header-conteudo">
+                <li class="li-header"><a href="../Page Inicial/paginainicial.html">Home</a></li>
+                <li class="li-header"><a href="../Page História/paginahistoria.html">História</a></li>
+                <li class="li-header"><a href="../Page Estatistica/paginaestatisticas.html">Títulos</b></li>
+                <li class="li-header" id="link_sobre_mim"><a>Sobre mim</a></li>
+                <li class="li-header>">|</li>
+
+                <div class="icones-header">
+                    <span id="usericon" class="material-symbols-outlined">account_circle</span>
+                    <button onclick="abrir_menu_flutuante()" id="setaicon"
+                        class="material-symbols-outlined">keyboard_arrow_down</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bloco_flutuante" id="bloco_flutuante">
+        <div class="conteudo-bloco-flutuante">
+            <div class="conteudo-nome-email">
+            <div class="saudacao">Olá, <span id="nome_saudacao">Lucas</span></div>
+            <span id="email_saudacao">lucas.flima@sptech.school</span>
+            </div>
+            <div class="conteudo-opcoes">
+                <span>Gerenciar conta</span>
+                <span><a href="../Page Estatistica/Page Detalhes Estatística/paginadetalhe.html">Estatísticas detalhadas</a></span>
+                <span><a href="../PageVotacao/paginavotacao.html">Votação</a></span>
+            </div>
+            <div class="logout">
+                <a href="../Page Login/paginalogin.html" onclick="limparSessao()">Fazer logout</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="banner">
+        <img src="../assets/messi-foto-mais-curtida.webp" alt="">
+    </div>
+
+    <div class="container">
+        <div class="conteudo_gerenciar_conta">
+            <div class="bloco_esquerda">
+                
+                <div class="titulo_bloco_esquerda">ALTERAR DADOS</div>
+                
+                <div class="conteudo_alterar_email">
+                    <div class="container_conteudo">            
+                        <div class="titulo_alterar_email">
+                            ALTERAR E-MAIL
+                        </div>
+
+                        <div class="span_input_alterar_email">
+                            <span class="span_alterar_email">E-mail atual:</span>
+                            <input type="text" class="input_alterar_email" id="inp_email_atual">
+                            <span class="span_alterar_email">Novo e-mail:</span>
+                            <input type="text" class="input_alterar_email" id="inp_email_novo">
+                        </div>
+                        <div class="mensagem_erro">
+                            <span id="msgErro"></span>
+                        </div>
+                        <div class="botao">
+                            <button onclick="enviar_alteracao_email()">ENVIAR</button>
+                        </div>
+                    </div>
+                    </div>
+
+                <div class="conteudo_alterar_senha">
+                    <div class="container_conteudo">
+
+                        <div class="titulo_alterar_senha">
+                            ALTERAR SENHA
+                        </div>
+                        
+                        <div class="span_input_alterar_senha">
+                            <span class="span_alterar_senha">Senha atual:</span>
+                            <input type="password" class="input_alterar_senha" id="inp_senha_atual">
+                            <span class="span_alterar_senha">Nova senha:</span>
+                            <input type="password" class="input_alterar_senha" id="inp_senha_nova">
+                            <span class="span_alterar_senha">Confirmar senha:</span>
+                            <input type="password" class="input_alterar_senha" id="inp_confirmar_senha">
+                        </div>
+
+                        <div class="mensagem_erro">
+                            <span id="msgErro_senha"></span>
+                        </div>
+
+                        <div class="botao">
+                            <button onclick="enviar_alteracao_senha()">ENVIAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloco_direita">
+                <div class="titulo_bloco_direita">
+                    ATUALIZAR DADOS
+                </div>
+
+                <div class="conteudo_complete_cadastro">
+                            <div class="container_conteudo">
+                            
+                            <div class="titulo_complete_cadastro">
+                                COMPLETE SEU CADASTRO
+                            </div>
+
+                            <div class="informacoes_complete_seu_cadastro">
+                                <div class="data_nascimento">
+                                    <span>Data de nascimento:</span>
+                                    <input type="date">
+                                </div>
+
+                                <div class="genero">
+                                    <div class="titulo_genero">Gênero</div>
+                                    
+                                    <div class="inputs_genero">
+
+                                        <input type="radio" name="resposta_genero" value="1">
+                                    <label for="1">Masculino</label>
+                                    
+                                    <input type="radio" name="resposta_genero" value="2">
+                                    <label for="2">Feminino</label>
+                                    
+                                    <input type="radio" name="resposta_genero" value="3">
+                                    <label for="3">Prefiro não dizer</label>
+                                </div>
+                                </div>
+
+                                <div class="endereco">
+                                    <div class="titulo_endereco">ENDEREÇO</div>
+                                </div>
+
+                                <div class="conteudo_endereco">
+                                    <div class="inputs_endereco_primeira_linha">  
+                                        <div class="inputs_endereco" id="input_estado">
+                                            <span>Estado:</span>
+                                            <input type="text">
+                                        </div>
+                                        <div class="inputs_endereco" id="input_cidade">
+                                            <span>Cidade:</span>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="inputs_endereco_segunda_linha">
+                                        <div class="inputs_endereco" id="input_cep">
+                                            <span>CEP:</span>     
+                                            <input placeholder="12345000" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="botao">
+                                    <button onclick="enviar_cadastro_completo()">ENVIAR</button>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./script.js"></script>

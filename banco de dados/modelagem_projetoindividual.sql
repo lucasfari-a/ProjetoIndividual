@@ -24,11 +24,19 @@ desc usuario;
 select * from usuario;
 select * from respostas;
 
+
 select count(pergunta1) from respostas where pergunta1 = 5;
 select count(n) from respostas where n = 2;
 select count(n) from respostas where n = 3;
 select count(n) from respostas where n = 4;
-select count(pergunta1) from respostas where pergunta1 = 1;
+
+SELECT 
+    SUM(CASE WHEN pergunta1 = 1 THEN 1 ELSE 0 END) AS resposta_a,
+    SUM(CASE WHEN pergunta1 = 2 THEN 1 ELSE 0 END) AS resposta_b,
+    SUM(CASE WHEN pergunta1 = 3 THEN 1 ELSE 0 END) AS resposta_c,
+    SUM(CASE WHEN pergunta1 = 4 THEN 1 ELSE 0 END) AS resposta_d,
+    SUM(CASE WHEN pergunta1 = 5 THEN 1 ELSE 0 END) AS resposta_e
+FROM respostas;
 
 select count(Pergunta1) from respostas where pergunta1 = 5;
 

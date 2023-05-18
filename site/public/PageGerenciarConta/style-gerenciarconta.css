@@ -1,0 +1,422 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+* {
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48,
+        'font-size' 10px;
+    margin-top: 18%;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.header-conteudo {
+    display: flex;
+    width: 100%;
+    height: 47px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header-conteudo li {
+    margin-left: 2%;
+}
+
+#link_sobre_mim {
+    font-weight: bold;
+}
+
+.icones-header {
+    margin-left: 2%;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+.bloco_flutuante {
+    display: none;
+    flex-direction: column;
+    background-color: #9EC3E6;
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    z-index: 2;
+    width: 15%;
+    top: 8%;
+    left: 75%;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.conteudo-nome-email {
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border-bottom: black solid 1px;
+}
+
+.saudacao {
+    font-size: 14px;
+}
+
+.conteudo-opcoes {
+    width: 70%;
+    margin: 10% 0 5% 5%;
+}
+
+.logout {
+    width: 40%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.bloco_flutuante a {
+    text-decoration: none;
+    color: black;
+}
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    background-color: #9EC3E6;
+    z-index: -1;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left, #000000b6, #000000b6, #03192db6)
+  }
+
+.banner img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+/* CONTEUDO GERENCIAR CONTA */
+
+.conteudo_gerenciar_conta {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container_conteudo {
+    width: 90%;
+    margin: auto;
+}
+.bloco_esquerda {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+}
+
+.titulo_bloco_esquerda {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.conteudo_alterar_email {
+    display: flex;
+    flex-direction: column;
+    background-color: #03192dce;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 5%;
+}
+
+.titulo_alterar_email {
+    text-align: center;
+    margin-top: 3%;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.span_input_alterar_email {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.span_input_alterar_email input {
+    margin-bottom: 2.5%;
+    border-radius: 5px;
+    width: 95%;
+    border: 0;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 2px;
+}
+
+.mensagem_erro {
+    width: 100%;
+    color: red;
+    font-size: 10px;
+    margin-top: -1%;
+    font-weight: 700;
+  }
+
+.botao {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+.botao button {
+    background-color: #1D4E89;
+    padding: 1%;
+    font-weight: 700;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    width: 22%;
+    height: 20px;
+    text-align: center;
+}
+
+.botao button:hover {
+    font-size: 12px;
+
+}
+
+/* ALTERAR SENHA */
+
+.conteudo_alterar_senha {
+    display: flex;
+    flex-direction: column;
+    background-color: #03192dce;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 5%;
+}
+
+.titulo_alterar_senha {
+    text-align: center;
+    margin-top: 4%;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.span_input_alterar_senha {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.span_input_alterar_senha input {
+    margin-bottom: 3%;
+    border-radius: 5px;
+    width: 70%;
+    border: 0;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 2px;
+}
+
+@media (min-height: 767px) {
+    .span_input_alterar_email {
+        margin-bottom: 5%;
+    }
+    .span_input_alterar_senha {
+        margin-bottom: 5%;
+    }
+    .titulo_bloco_esquerda {
+        margin-top: 15%;
+    }
+    .conteudo_alterar_senha{
+        margin-top: 10%;
+    }
+    .conteudo_alterar_email {
+        margin-top: 10%;
+    }
+}
+
+/* CONTEUDO BLOCO DIREITA */
+
+.bloco_direita {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.titulo_bloco_direita{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10%;
+    text-align: center;
+}
+
+.conteudo_complete_cadastro {
+    display: flex;
+    flex-direction: column;
+    background-color: #03192dce;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 5%;
+}
+
+.titulo_complete_cadastro {
+    text-align: center;
+    margin-top: 4%;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.informacoes_complete_seu_cadastro {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.data_nascimento {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.data_nascimento input {
+    width: 40%;
+    text-align: center;
+}
+
+.genero {
+    margin-top: 4%;
+}
+
+.titulo_genero {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.inputs_genero {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.endereco {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo_endereco {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.conteudo_endereco {
+    margin: 5% 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs_endereco_primeira_linha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+
+.inputs_endereco {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.inputs_endereco input {
+    border: 0;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+#input_estado {
+    width: 30%;
+}
+
+#input_cidade {
+    width: 55%;
+    margin-right: 5%;
+}
+
+#input_cep {
+    width: 30%;
+}
+
+@media (min-height: 767px) {
+    .informacoes_complete_seu_cadastro {
+        margin-top: 7%;
+    }
+    .genero {
+        margin-top: 5%;
+    }
+    .endereco {
+        margin-top: 5%;
+    }
+}
