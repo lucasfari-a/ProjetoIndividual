@@ -128,7 +128,7 @@
                             <div class="informacoes_complete_seu_cadastro">
                                 <div class="data_nascimento">
                                     <span>Data de nascimento:</span>
-                                    <input type="date">
+                                    <input type="date" id="inp_nascimento">
                                 </div>
 
                                 <div class="genero">
@@ -136,14 +136,14 @@
                                     
                                     <div class="inputs_genero">
 
-                                        <input type="radio" name="resposta_genero" value="1">
-                                    <label for="1">Masculino</label>
+                                        <input type="radio" name="resposta_genero" value="Masculino">
+                                    <label for="Masculino">Masculino</label>
                                     
-                                    <input type="radio" name="resposta_genero" value="2">
-                                    <label for="2">Feminino</label>
+                                    <input type="radio" name="resposta_genero" value="Feminino">
+                                    <label for="Feminino">Feminino</label>
                                     
-                                    <input type="radio" name="resposta_genero" value="3">
-                                    <label for="3">Prefiro não dizer</label>
+                                    <input type="radio" name="resposta_genero" value="Prefiro não dizer">
+                                    <label for="Prefiro não dizer">Prefiro não dizer</label>
                                 </div>
                                 </div>
 
@@ -155,20 +155,24 @@
                                     <div class="inputs_endereco_primeira_linha">  
                                         <div class="inputs_endereco" id="input_estado">
                                             <span>Estado:</span>
-                                            <input type="text">
+                                            <input type="text" id="inp_estado">
                                         </div>
                                         <div class="inputs_endereco" id="input_cidade">
                                             <span>Cidade:</span>
-                                            <input type="text">
+                                            <input type="text" id="inp_cidade">
                                         </div>
                                     </div>
 
                                     <div class="inputs_endereco_segunda_linha">
                                         <div class="inputs_endereco" id="input_cep">
                                             <span>CEP:</span>     
-                                            <input placeholder="12345000" type="text">
+                                            <input placeholder="12345000" type="text" id="inp_cep">
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="mensagem_erro">
+                                    <span id="msgErro_cadastro_completo"></span>
                                 </div>
 
                                 <div class="botao">
