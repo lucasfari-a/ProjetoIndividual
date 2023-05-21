@@ -105,6 +105,8 @@ function enviar_alteracao_senha() {
     msgErro_senha.innerHTML = `Ambas as senhas são iguais`;
   } else if (senha_nova != senha_confirmar) {
     msgErro_senha.innerHTML = `As senhas não coincidem`;
+  } else if(senha_nova.length < 6) {
+    msgErro_senha.innerHTML = `A senha precisa ter no mínimo 6 caracteres.`
   } else {
     fetch("/usuarios/atualizarsenha", {
       method: "POST",

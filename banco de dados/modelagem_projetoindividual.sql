@@ -6,7 +6,12 @@ create table usuario (
     nome varchar(45),
     sobrenome varchar(45),
     email varchar(100),
-    senha varchar(200));
+    senha varchar(200),
+    data_nascimento date,
+    genero varchar(45),
+    estado varchar(45),
+    cidade varchar(100),
+    cep char(9));
     
 create table respostas (
 	idResposta int primary key auto_increment,
@@ -23,7 +28,6 @@ desc usuario;
 
 select * from usuario;
 select * from respostas;
-
 
 select count(pergunta1) from respostas where pergunta1 = 5;
 select count(n) from respostas where n = 2;
