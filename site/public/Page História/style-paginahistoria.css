@@ -86,339 +86,137 @@ button {
     background: linear-gradient(#08335a, #9EC3E6);
 }
 
-/* INFANCIA E JUVENTUDE */
+#inicio_barcelona {
+    background-color: #DB0030;
+    margin-top: 0;
+}
 
-.infancia-juventude {
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
+#inicio_profissional_barcelona {
+    background-color: #1D4E89;
+}
+
+#despertar_genio {
+    background-color: #E6AF2E;
+    color: black;
+}
+
+#auge_estatistico {
+    background-color: #03192D;
+}
+
+#trio_msn {
+    background-color: #880C0A;
+}
+
+#messidependencia {
+    background-color: #03192D;
+}
+
+#chegada_psg {
+    background-color: #13203F;
+}
+
+#inicio_selecao {
+    background-color: #2B4570;
+    margin: 0;
+}
+
+#consolidacao_selecao {
+    background-color: #03192D;
+}
+
+#aposentadoria {
+    background-color: #5B5F8D;
+}
+
+#inicio_fase_ouro {
+    background-color: #03192D;
+}
+
+
+.bloco_externo {
     margin-top: 5%;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    height: 340px;
 }
 
-.titulo-inf-juv {
-    width: fit-content;
-    font-weight: bold;
+.conteudo_historia {
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
 }
 
-.inf-juv-conteudo{
+.conteudo_esquerda {
+    width: 70%;
+}
+
+.titulo {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+}
+.conteudo_texto {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.inf-juv-esq {
-    width: 33%;
+.conteudo_texto_esquerda {
     font-size: 12px;
-    margin-top: 2%;
+    font-weight: 400;
+    margin-right: 5%;
 }
 
-.inf-juv-meio {
-    width: 33%;
+.conteudo_texto_direita {
     font-size: 12px;
-    margin-top: 2%;
+    font-weight: 400;
 }
 
-.inf-juv-foto img {
+.conteudo_foto_direita {
+    display: flex;
+    margin-left: 8%;
+}
+
+.foto {
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
 }
+
+.foto img {
+    height: 273px;
+    border-radius: 10px;
+    width: 212px;
+}
+
+
+.conteudo_foto_esquerda {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo_foto_esquerda .foto {
+    display: flex;
+    justify-content: left;
+}
+.conteudo_textual_direita {
+    width: 70%;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
 
 .texto-era-barcelona{
     display: flex;
     justify-content: center;
     font-size: 26px;
     font-weight: bold;
-}
-
-/* INICIO NO BARCELONA */
-
-.inicio-barcelona {
-    display: flex;
-    flex-direction: column;
-    background-color: #DB0030;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.inicio-barca-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.inicio-barca-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.inicio-barca-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-barca-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-barca-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* INICIO COMO PROFISSIONAL */
-
-.inicio-barca-prof {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #1D4E89;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-}
-
-.inicio-barca-prof-titulo {
-    width: fit-content;
-    font-weight: bold;
-}
-
-.inicio-barca-prof-conteudo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.inicio-barca-prof-esq {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-barca-prof-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-barca-prof-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* DESPERTAR DO GÊNIO */
-
-.despertar {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #E6AF2E;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: black;
-    align-items: center;
-}
-
-.despertar-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.despertar-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.despertar-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.despertar-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.despertar-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* AUGE ESTATÍSTICO */
-
-.auge-estatistico {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #03192D;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-}
-
-.auge-estatistico-titulo {
-    width: fit-content;
-    font-weight: bold;
-}
-
-.auge-estatistico-conteudo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.auge-estatistico-esq {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.auge-estatistico-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.auge-estatistico-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* TRIO MSN */
-
-.trio-msn {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #880C0A;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.trio-msn-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.trio-msn-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.trio-msn-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.trio-msn-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.trio-msn-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* MESSIDEPENDENCIA */
-
-.messidependencia {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #03192D;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-}
-
-.messidependencia-titulo {
-    width: fit-content;
-    font-weight: bold;
-    font-style: italic;
-}
-
-.messidependencia-conteudo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.messidependencia-esq {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.messidependencia-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.messidependencia-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* DESPEDIDA DO BARCELONA */
-
-.despedida {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.despedida-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.despedida-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.despedida-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.despedida-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.despedida-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
 }
 
 .texto-PSG{
@@ -428,222 +226,11 @@ button {
     font-weight: bold;
 }
 
-/* CHEGADA AO PSG */
-
-.chegada-psg {
-    display: flex;
-    flex-direction: column;
-    background-color: #13203F;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.chegada-psg-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.chegada-psg-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.chegada-psg-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.chegada-psg-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.chegada-psg-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
 .texto-selecao-argentina{
     display: flex;
     justify-content: center;
     font-size: 26px;
     font-weight: bold;
-}
-
-/* INICIO NA SELECAO */
-
-.inicio-selecao {
-    display: flex;
-    flex-direction: column;
-    background-color: #2B4570;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.inicio-selecao-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.inicio-selecao-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.inicio-selecao-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-selecao-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-selecao-foto img {
-    width: 198px;
-    height: 270px;
-    border-radius: 10px;
-}
-
-/* CONSOLIDACAO NA SELECAO */
-
-.consolidacao-selecao {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #03192D;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-}
-
-.consolidacao-selecao-titulo {
-    width: fit-content;
-    font-weight: bold;
-}
-
-.consolidacao-selecao-conteudo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.consolidacao-selecao-esq {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.consolidacao-selecao-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.consolidacao-selecao-foto img {
-    width: 198px;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* APOSENTADORIA? */
-
-.aposentadoria {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #5B5F8D;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.aposentadoria-titulo {
-    width: fit-content;
-    font-weight: bold;
-    padding-right: 17%;
-}
-
-.aposentadoria-conteudo{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.aposentadoria-dir {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.aposentadoria-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.aposentadoria-foto img {
-    width: 198px;
-    height: 270px;
-    border-radius: 10px;
-}
-
-/* INICIO DA FASE DE OURO */
-
-.inicio-fase-ouro {
-    margin-top: 5%;
-    display: flex;
-    flex-direction: column;
-    background-color: #03192D;
-    padding: 3% 6%;
-    border-radius: 10px;
-    color: white;
-}
-
-.inicio-fase-ouro-titulo {
-    width: fit-content;
-    font-weight: bold;
-}
-
-.inicio-fase-ouro-conteudo{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.inicio-fase-ouro-esq {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-fase-ouro-meio {
-    width: 33%;
-    font-size: 12px;
-    margin-top: 2%;
-}
-
-.inicio-fase-ouro-foto img {
-    width: 150px;
-    height: 200px;
-    border-radius: 10px;
-}
-
-#messi_finalissima {
-    position: relative;
-    z-index: 2;
-    left: -20%;
-    top: 30%;
 }
 
 /* SUPREMACIA FUTEBOLISTICA */
