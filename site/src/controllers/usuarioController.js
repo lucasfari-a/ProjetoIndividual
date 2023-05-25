@@ -283,6 +283,32 @@ function enviar_cadastro_completo(req, res) {
   }
 }
 
+function verificarsenha(req, res) {
+  var senha = req.body.senha_atualServer;
+
+  if (senha == undefined) {
+    res.status(400).send("A senha está indefinida!");
+  } else {
+    usuarioModel
+      .verificarsenha(senha)
+      .then(function (resultado) {
+        if (resultado.length > 0) {
+          res.json({ senhaExiste: true });
+        } else {
+          res.json({ senhaExiste: false });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+        console.log(
+          "\nHouve um erro ao verificar a senha! Erro: ",
+          erro.sqlMessage
+        );
+        res.status(500).json(erro.sqlMessage);
+      });
+  }
+}
+
 module.exports = {
   entrar,
   cadastrar,
@@ -294,4 +320,5 @@ module.exports = {
   enviar_alteracao_email,
   enviar_alteracao_senha,
   enviar_cadastro_completo,
+  verificarsenha
 };

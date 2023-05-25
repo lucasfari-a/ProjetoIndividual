@@ -44,4 +44,8 @@ router.post("/enviarcadastrocompleto", function (req, res) {
   usuarioController.enviar_cadastro_completo(req, res);
 });
 
+router.post("/verificarsenha", function (req, res) {
+  usuarioController.verificarsenha(req, res);
+});
+
 module.exports = router;

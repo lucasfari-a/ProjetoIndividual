@@ -147,6 +147,12 @@ function enviar_cadastro_completo(
   });
 }
 
+function verificarsenha(senha) {
+  var instrucao = `SELECT * FROM usuario WHERE senha = sha2('${senha}', 256)`;
+  console.log("Executando verificação de senha: \n" + instrucao);
+  return database.executar(instrucao);
+}
+
 module.exports = {
   entrar,
   cadastrar,
@@ -157,4 +163,5 @@ module.exports = {
   enviar_alteracao_email,
   enviar_alteracao_senha,
   enviar_cadastro_completo,
+  verificarsenha
 };

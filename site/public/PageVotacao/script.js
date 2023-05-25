@@ -87,7 +87,7 @@ function obter_resposta(resposta_id) {
 
 /* CHARTJS - GRÁFICO RESPOSTAS PERGUNTAS */
 
-const labels = [`a`, `b`, `c`, `d`, `e`];
+const labels = [`A`,`B`,`C`,`D`,`E`];
 
 /* GRÁFICO */
 
@@ -116,7 +116,7 @@ const data_pergunta = {
   datasets: [
     {
       label: "Qtd. Respostas",
-      data: [0, 0, 0, 0, 0],
+      data: [],
       backgroundColor: "#880C0A",
       borderColor: "black",
       borderWidth: 1,
@@ -201,7 +201,7 @@ function finalizar() {
     .then(function (resposta) {
       if (resposta.ok) {
         setTimeout(function () {
-          div_escolher_grafico.style.display = `flex`;
+          window.location = `paginavotacao.html`
         }, 100);
       } else {
         throw new Error("Houve um erro ao enviar os dados");

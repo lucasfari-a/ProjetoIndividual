@@ -34,6 +34,33 @@ function verificaremail(email, callback) {
     });
 }
 
+function verificarsenha(senha, callback) {
+  fetch("/usuarios/verificarsenha", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      senha_atualServer: senha,
+    }),
+  })
+    .then(function (response) {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Erro na verificação da senha");
+      }
+    })
+    .then(function (data) {
+      callback(null, data.senhaExiste);
+    })
+    .catch(function (error) {
+      console.error(error);
+      callback(error);
+    });
+}
+
+
 function enviar_alteracao_email() {
   var email_atual_verificacao = sessionStorage.EMAIL_USUARIO;
   var idUsuario = sessionStorage.ID_USUARIO;
@@ -94,7 +121,7 @@ function enviar_alteracao_email() {
   }
 }
 
-function enviar_alteracao_senha() {
+/* function enviar_alteracao_senha() {
   const msgErro_senha = document.getElementById("msgErro_senha");
   var senha_atual = inp_senha_atual.value;
   var senha_nova = inp_senha_nova.value;
@@ -137,6 +164,64 @@ function enviar_alteracao_senha() {
       });
 
     return false;
+  }
+} */
+
+function enviar_alteracao_senha() {
+  const msgErro_senha = document.getElementById("msgErro_senha");
+  var senha_atual = inp_senha_atual.value;
+  var senha_nova = inp_senha_nova.value;
+  var senha_confirmar = inp_confirmar_senha.value;
+  var idUsuario = sessionStorage.ID_USUARIO;
+
+  if (senha_atual == senha_nova) {
+    msgErro_senha.innerHTML = `Ambas as senhas são iguais`;
+  } else if (senha_nova != senha_confirmar) {
+    msgErro_senha.innerHTML = `As senhas não coincidem`;
+  } else if(senha_nova.length < 6) {
+    msgErro_senha.innerHTML = `A senha precisa ter no mínimo 6 caracteres.`
+  } else {
+    verificarsenha(senha_atual, function (error, senhaExiste) {
+      if (error) {
+        console.error(error);
+        return;
+      }
+
+      if (senhaExiste) {
+        fetch("/usuarios/atualizarsenha", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            senhaNovaServer: senha_nova,
+            idServer: idUsuario,
+          }),
+        })
+          .then(function (resposta) {
+            if (resposta.ok) {
+              setTimeout(function () {
+                msgErro_senha.innerHTML = `Senha atualizada com sucesso!`;
+                msgErro_senha.style.color = `green`;
+              }, 500);
+              setTimeout(function () {
+                window.location = "../Page Login/paginalogin.html";
+                limparSessao();
+              }, 2000);
+            } else {
+              throw new Error("Houve um erro ao atualizar a senha!");
+            }
+          })
+          .catch(function (erro) {
+            console.log(erro);
+          });
+    
+        return false;
+      } else {
+        msgErro_senha.style.display = "block";
+        msgErro_senha.innerHTML = "Essa não é sua senha atual!";
+      }
+    });
   }
 }
 
