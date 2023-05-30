@@ -24,6 +24,17 @@ create table respostas (
     constraint fkUsuario foreign key (fkUsuario) references usuario(idUsuario)
     );
     
+insert into respostas (pergunta1,pergunta2,pergunta3,pergunta4,pergunta5, fkUSuario) values
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1),
+(1,2,3,4,5,1);
 desc usuario;
 
 select * from usuario;
