@@ -54,8 +54,12 @@ function passar_div(n) {
 function showDivs(n) {
     var i;
     var div_titulos = document.getElementsByClassName("titulos-imagens-visivel");
-    if (n > div_titulos.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = div_titulos.length };
+    if (n > div_titulos.length) { 
+        slideIndex = 1 
+    }
+    if (n < 1) { 
+        slideIndex = div_titulos.length 
+    };
     for (i = 0; i < div_titulos.length; i++) {
         div_titulos[i].style.display = "none";
     }
