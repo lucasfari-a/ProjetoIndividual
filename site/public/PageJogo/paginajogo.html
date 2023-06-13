@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/funcoes.js"></script>
+    <link rel="stylesheet" href="../cssGlobal/menuflutuante.css">
+    <link rel="stylesheet" href="style-pagejogo.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>LM10 - Pênalti</title>
+</head>
+
+<body onload="validarSessao()">
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="../../assets/logoprovisorio.png" alt="">
+            </div>
+
+            <div class="header-conteudo">
+                <li class="li-header"><a href="../Page Inicial/paginainicial.html">Home</a></li>
+                <li class="li-header"><a href="../Page História/paginahistoria.html">História</a></li>
+                <li class="li-header"><a href="../Page Estatistica/paginaestatisticas.html">Títulos</a></li>
+                <li class="li-header"><a>Sobre mim</a></li>
+                <li class="li-header"><a href="../PageVotacao/paginavotacao.html">Votação</a></li>
+                <li class="li-header>">|</li>
+
+                <div class="icones-header">
+                    <span id="usericon" class="material-symbols-outlined">account_circle</span>
+                    <button onclick="abrir_menu_flutuante()" id="setaicon"
+                        class="material-symbols-outlined">keyboard_arrow_down</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bloco_flutuante" id="bloco_flutuante">
+        <div class="conteudo-bloco-flutuante">
+            <div class="conteudo-nome-email">
+                <div class="saudacao">Olá, <span id="nome_saudacao">Lucas</span></div>
+                <span id="email_saudacao">lucas.flima@sptech.school</span>
+            </div>
+            <div class="conteudo-opcoes">
+                <span><a href="../PageGerenciarConta/paginagerenciarconta.html">Gerenciar conta</a></span>
+                <span><a href="../Page Estatistica/Page Detalhes Estatística/paginadetalhe.html">Estatísticas
+                        detalhadas</a></span>
+                <span>Jogar pênaltis</span>
+            </div>
+            <div class="logout">
+                <a href="../Page Login/paginalogin.html" onclick="limparSessao()">Fazer logout</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="fundo_inicio_jogo" id="fundo_inicio_jogo">
+        <div class="banner" id="banner">
+            <img src="../assets/marcapenalti.jpg" alt="">
+        </div>
+
+        <div class="bola_marca_inicial" id="bola_marca_inicial">
+            <img src="../assets/bolafutebol.png" alt="">
+        </div>
+
+        <div class="goleiro" id="goleiro">
+            <img src="../assets/goleiromeio-removebg-preview.png" alt="">
+        </div>
+    </div>
+
+    <div class="container_inicio_jogo" id="container_inicio_jogo">
+        <div class="inicio_jogo" id="inicio_jogo">
+
+            <div class="conteudo_inicio_jogo">
+
+                <div class="titulo_inicio_jogo">
+                    <span>FINAL</span>
+                    <span>COPA DO MUNDO</span>
+                </div>
+
+                <div class="meio_inicio_jogo" id="meio_inicio_jogo">
+                    <img src="../assets/bandeira argentina.png" alt="">
+                    <span>ARGENTINA <span id="placar_argentina"></span> x <span id="placar_franca"></span> FRANÇA</span>
+                    <img src="../assets/bandeirafranca.jpg" alt="">
+                </div>
+
+                <div class="texto_inicio_jogo" id="texto_inicio_jogo">
+                    <span>Será que você consegue converter os 5 pênaltis?</span>
+                </div>
+
+                <div class="botao_jogo" id="botao_jogo">
+                    <button onclick="jogar()">JOGAR</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="texto_explicativo" id="texto_explicativo" style="display: none">
+        <span>ESCOLHA UM LUGAR</span>
+        <span>PARA CHUTAR</span>
+    </div>
+
+    <div class="bola_no_gol" id="bola_no_gol" style="display: none">
+        <img src="../assets/bolafutebol.png" onclick="chutar(1)" id="bola_futebol1">
+        <img src="../assets/bolafutebol.png" onclick="chutar(2)" id="bola_futebol2">
+        <img src="../assets/bolafutebol.png" onclick="chutar(3)" id="bola_futebol3">
+    </div>
+
+    <div class="botao_novo_chute" id="botao_novo_chute" style="display: none;">
+        <button onclick="novo_chute()">PRÓXIMO PÊNALTI</button>
+    </div>
+
+    <div class="score" id="score"></div>
+
+</body>
+
+</html>
+
+<script src="./script.js"></script>
