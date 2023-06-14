@@ -87,7 +87,14 @@ function obter_resposta(resposta_id) {
 
 /* CHARTJS - GRÁFICO RESPOSTAS PERGUNTAS */
 
-const labels = [`A`,`B`,`C`,`D`,`E`];
+var label_pergunta1 = ["2010-11","2011-12", "2014-15", "2018-19", "2021-22"]
+var label_pergunta2 = ["Falta contra o Liverpool (Champions 2019)","Real Madrid (Champions 2011)", "Getafe (LaLiga 2007)", "Bayern Munchen (Champions 2015)", "Athletico Bilbao (Copa del Rey 2015)"]
+var label_pergunta3 = ["Copa do Mundo 2022","Champions League 2015", "Champions League 2011", "Copa Del Rey 2015", "Copa América 2021"]
+var label_pergunta4 = ["Drible e agilidade","Bola parada", "Chute", "Inteligência", "Visão de jogo"]
+var label_pergunta5 = ["FC Barcelona","Newells Old Boys", "Liga MLS (Americana)", "Liga Árabe", "Outro"]
+
+const tooltips = [label_pergunta1, label_pergunta2, label_pergunta3, label_pergunta4, label_pergunta5];
+const labels = ["A", "B", "C", "D", "E"];
 
 /* GRÁFICO */
 
@@ -123,6 +130,8 @@ const data_pergunta = {
     },
   ],
 };
+
+var grafico_escolhido = 0;
 
 const config_pergunta = {
   type: "bar",
@@ -160,6 +169,14 @@ const config_pergunta = {
       },
     },
     plugins: {
+      tooltip: {
+        callbacks: {
+          title: function (context) {
+            const dataIndex = [context[0].dataIndex]
+            return tooltips[grafico_escolhido - 1][dataIndex];
+        },
+        }
+      },
       title: {
         display: false,
         font: {
@@ -246,6 +263,7 @@ function escolher_pergunta(n) {
             }
           }
           atualizar_grafico_pergunta(n);
+          grafico_escolhido = n
           console.log(json);
         });
       } else {

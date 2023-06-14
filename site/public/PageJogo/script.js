@@ -21,7 +21,7 @@ function jogar(){
     TextoExplicativo.style.display = "flex"
 }
 
-var goleiroEsquerda = `<img src="../assets/goleiroesquerda-removebg.png" alt="" style="transform: rotate(310deg)">`;
+var goleiroEsquerda = `<img src="../assets/goleiroesquerda-removebg-removebg-preview.png" alt="" style="transform: rotate(310deg)">`;
 var goleiroDireita = `<img src="../assets/goleirodireita-removebg-preview.png" alt="" style="transform: rotate(30deg)">`;
 var goleiroMeio = `<img src="../assets/goleiromeio-removebg-preview.png" alt="">`;
 
