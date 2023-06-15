@@ -30,6 +30,7 @@ const pergunta5 = document.getElementById("pergunta5");
 const div_escolher_grafico = document.getElementById("div_escolher_grafico");
 const div_grafico = document.getElementById("div_grafico");
 const grafico_final = document.getElementById("grafico_final");
+const divPerguntaSelecionada = document.getElementById("pergunta_selecionada")
 
 var cliques = 0;
 
@@ -261,6 +262,17 @@ function escolher_pergunta(n) {
             } else {
               resposta_pergunta5.push(json[i][0].qtd);
             }
+          }
+          if (n == 1) {
+            divPerguntaSelecionada.innerHTML = "Qual a melhor temporada do Messi?"
+          } else if (n == 2) {
+            divPerguntaSelecionada.innerHTML = "Qual o gol mais bonito do Messi?"
+          } else if (n == 3) {
+            divPerguntaSelecionada.innerHTML = "Qual título você mais vibrou?"
+          } else if (n == 4) {
+            divPerguntaSelecionada.innerHTML = "Qual a melhor qualidade do Messi?"
+          } else {
+            divPerguntaSelecionada.innerHTML = "Onde o Messi irá se aposentar?"
           }
           atualizar_grafico_pergunta(n);
           grafico_escolhido = n

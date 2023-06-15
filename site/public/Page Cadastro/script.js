@@ -37,7 +37,7 @@ function cadastrar() {
     msgErro.innerHTML = "Todos os campos devem estar preenchidos";
     finalizarAguardar();
     return false;
-  } else if (emailVar.indexOf("@") === -1 || emailVar.indexOf(".") === -1) {
+  } else if (emailVar.indexOf("@") === -1 && emailVar.indexOf(".") === -1) {
     msgErro.style.display = "block";
     msgErro.innerHTML = "O e-mail deve conter @ e .";
     finalizarAguardar();
